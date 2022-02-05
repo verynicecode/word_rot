@@ -7,11 +7,20 @@
 
 import SwiftUI
 
+let validWords = [
+    "foo",
+    "bar"
+]
+
 struct ContentView: View {
     @State private var word: String = ""
+    @State private var wordError = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
+            if wordError {
+              Text("Word Not Found")
+            }
             TextField("", text:$word)
                 .textFieldStyle(.roundedBorder)
             Button(action: playWord) {
@@ -24,7 +33,11 @@ struct ContentView: View {
     }
     
     func playWord() {
-        word = ""
+        if validWords.contains(word.lowercased()) {
+            word = ""
+        } else {
+            wordError = true
+        }
     }
 }
 
