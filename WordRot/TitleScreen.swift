@@ -1,15 +1,4 @@
-//
-//  TitleScreen.swift
-//  WordRot
-//
-//  Created by Jonathan Allured on 2/5/22.
-//
-
 import SwiftUI
-
-class Game: ObservableObject {
-    @Published var isActive = false
-}
 
 struct TitleScreen: View {
     @State private var showGame = false
