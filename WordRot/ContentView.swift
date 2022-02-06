@@ -1,16 +1,4 @@
-//
-//  ContentView.swift
-//  WordRot
-//
-//  Created by Jonathan Allured on 1/28/22.
-//
-
 import SwiftUI
-
-let validWords = [
-    "foo",
-    "bar"
-]
 
 struct ContentView: View {
     @State private var word: String = ""
@@ -41,7 +29,7 @@ struct ContentView: View {
     }
     
     func playWord() {
-        if validWords.contains(word.lowercased()) {
+        if game.isValidWord(word.lowercased()) {
             word = ""
         } else {
             wordError = true
