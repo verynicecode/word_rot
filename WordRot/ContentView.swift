@@ -34,6 +34,10 @@ struct ContentView: View {
     
     func playWord() {
         game.playWord(word.lowercased())
+        
+        if game.lastError == nil {
+            word = ""
+        }
     }
     
     func quitGame() {
