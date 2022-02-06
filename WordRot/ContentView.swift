@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var word: String = ""
     @State private var wordError = false
     
+    @EnvironmentObject var game: Game
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             if wordError {
@@ -24,12 +26,18 @@ struct ContentView: View {
             TextField("", text:$word)
                 .textFieldStyle(.roundedBorder)
             Button(action: playWord) {
-                Text("PLAY")
+                Text("play")
+            }
+            .buttonStyle(.bordered)
+            .foregroundColor(.black)
+            Button(action: quitGame) {
+                Text("quit")
             }
             .buttonStyle(.bordered)
             .foregroundColor(.black)
         }
         .padding(20)
+        .navigationBarBackButtonHidden(true)
     }
     
     func playWord() {
@@ -38,6 +46,10 @@ struct ContentView: View {
         } else {
             wordError = true
         }
+    }
+    
+    func quitGame() {
+        game.isActive = false
     }
 }
 
