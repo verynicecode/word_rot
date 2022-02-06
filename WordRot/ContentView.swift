@@ -37,7 +37,7 @@ struct ContentView: View {
     }
     
     func quitGame() {
-        game.isActive = false
+        game.quit()
     }
 }
 
