@@ -7,12 +7,13 @@ let validWords = [
 
 class Game: ObservableObject {
     @Published var isActive = false
+    @Published var lastError: String?
     
     func quit() {
         isActive = false
     }
     
-    func isValidWord(_ word: String) -> Bool {
-        return validWords.contains(word)
+    func playWord(_ word: String) {
+        guard validWords.contains(word) else { lastError = "word not found"; return }
     }
 }
