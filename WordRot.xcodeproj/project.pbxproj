@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC09A6FD27AF4BDB00715D3E /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09A6FC27AF4BDB00715D3E /* TitleScreen.swift */; };
 		FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74AE27A4831400779157 /* WordRotApp.swift */; };
 		FC8F74B127A4831400779157 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74B027A4831400779157 /* ContentView.swift */; };
 		FC8F74B327A4831600779157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8F74B227A4831600779157 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC09A6FC27AF4BDB00715D3E /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		FC8F74AB27A4831400779157 /* WordRot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordRot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8F74AE27A4831400779157 /* WordRotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRotApp.swift; sourceTree = "<group>"; };
 		FC8F74B027A4831400779157 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				FC8F74B027A4831400779157 /* ContentView.swift */,
 				FC8F74B227A4831600779157 /* Assets.xcassets */,
 				FC8F74B427A4831600779157 /* Preview Content */,
+				FC09A6FC27AF4BDB00715D3E /* TitleScreen.swift */,
 			);
 			path = WordRot;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				FC8F74B127A4831400779157 /* ContentView.swift in Sources */,
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
+				FC09A6FD27AF4BDB00715D3E /* TitleScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
