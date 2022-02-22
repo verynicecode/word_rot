@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var word: String = ""
     
     @ObservedObject var game: Game
@@ -42,6 +44,7 @@ struct ContentView: View {
     
     func quitGame() {
         game.quit()
+        dismiss()
     }
 }
 
