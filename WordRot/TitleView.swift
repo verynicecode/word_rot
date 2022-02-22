@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct TitleScreen: View {
+struct TitleView: View {
     var body: some View {
         NavigationView {
             VStack {
                 Text("word rot").foregroundColor(.black)
-                NavigationLink("start", destination: ContentView(game: Game()))
+                NavigationLink("start", destination: GameView(game: Game()))
                     .buttonStyle(.bordered)
                     .foregroundColor(.black)
             }
@@ -15,6 +15,6 @@ struct TitleScreen: View {
 
 struct TitleScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TitleScreen()
+        TitleView()
     }
 }
