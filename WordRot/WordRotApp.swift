@@ -11,7 +11,7 @@ import SwiftUI
 struct WordRotApp: App {
     var body: some Scene {
         WindowGroup {
-            TitleView()
+            TitleView(store: GameStore.shared)
         }
     }
 }
