@@ -9,7 +9,7 @@ struct GameView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            TextField("", text:$word)
+            TextField("", text: $word)
                 .textFieldStyle(.roundedBorder)
             
             HStack(spacing: 20) {
@@ -43,7 +43,7 @@ struct GameView: View {
     }
     
     func quitGame() {
-        game.quit()
+        GameStore.shared.endCurrentGame()
         dismiss()
     }
 }

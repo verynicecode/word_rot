@@ -12,4 +12,10 @@ class GameStore: ObservableObject {
         self.games = [firstGame]
         self.currentGame = firstGame
     }
+    
+    func endCurrentGame() {
+        let newGame = Game()
+        self.games.append(newGame)
+        self.currentGame = newGame
+    }
 }
