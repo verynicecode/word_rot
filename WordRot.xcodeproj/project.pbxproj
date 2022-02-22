@@ -75,6 +75,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC036FC827C59EB300325826 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC8F74B027A4831400779157 /* GameView.swift */,
+				FC09A6FC27AF4BDB00715D3E /* TitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC036FC927C59ECD00325826 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC09A6FE27AF811600715D3E /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FC8F74A227A4831400779157 = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +115,11 @@
 		FC8F74AD27A4831400779157 /* WordRot */ = {
 			isa = PBXGroup;
 			children = (
+				FC036FC927C59ECD00325826 /* Models */,
+				FC036FC827C59EB300325826 /* Views */,
 				FC8F74AE27A4831400779157 /* WordRotApp.swift */,
-				FC8F74B027A4831400779157 /* GameView.swift */,
 				FC8F74B227A4831600779157 /* Assets.xcassets */,
 				FC8F74B427A4831600779157 /* Preview Content */,
-				FC09A6FC27AF4BDB00715D3E /* TitleView.swift */,
-				FC09A6FE27AF811600715D3E /* Game.swift */,
 			);
 			path = WordRot;
 			sourceTree = "<group>";
