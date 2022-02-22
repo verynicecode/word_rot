@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var word: String = ""
     
-    @EnvironmentObject var game: Game
+    @ObservedObject var game: Game
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -47,6 +47,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let game = Game()
+        ContentView(game: game)
     }
 }

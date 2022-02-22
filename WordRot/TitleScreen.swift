@@ -8,7 +8,7 @@ struct TitleScreen: View {
         NavigationView {
             VStack {
                 Text("word rot").foregroundColor(.black)
-                NavigationLink(destination: ContentView(), isActive: $game.isActive) { EmptyView() }
+                NavigationLink(destination: ContentView(game: game), isActive: $game.isActive) { EmptyView() }
                 Button(action: startGame) {
                     Text("start")
                 }
@@ -16,7 +16,6 @@ struct TitleScreen: View {
                 .foregroundColor(.black)
             }
         }
-        .environmentObject(game)
     }
     
     func startGame() {
