@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var word: String = ""
@@ -48,9 +48,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         let game = Game()
-        ContentView(game: game)
+        GameView(game: game)
     }
 }
