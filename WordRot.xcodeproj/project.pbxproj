@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC036FCB27C59F2100325826 /* GameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FCA27C59F2100325826 /* GameStore.swift */; };
+		FC036FCD27C5DAF100325826 /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FCC27C5DAF100325826 /* WordsView.swift */; };
 		FC09A6FD27AF4BDB00715D3E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09A6FC27AF4BDB00715D3E /* TitleView.swift */; };
 		FC09A6FF27AF811600715D3E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09A6FE27AF811600715D3E /* Game.swift */; };
 		FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74AE27A4831400779157 /* WordRotApp.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		FC036FCA27C59F2100325826 /* GameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStore.swift; sourceTree = "<group>"; };
+		FC036FCC27C5DAF100325826 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
 		FC09A6FC27AF4BDB00715D3E /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		FC09A6FE27AF811600715D3E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FC8F74AB27A4831400779157 /* WordRot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordRot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			children = (
 				FC8F74B027A4831400779157 /* GameView.swift */,
 				FC09A6FC27AF4BDB00715D3E /* TitleView.swift */,
+				FC036FCC27C5DAF100325826 /* WordsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			files = (
 				FC8F74B127A4831400779157 /* GameView.swift in Sources */,
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
+				FC036FCD27C5DAF100325826 /* WordsView.swift in Sources */,
 				FC09A6FD27AF4BDB00715D3E /* TitleView.swift in Sources */,
 				FC036FCB27C59F2100325826 /* GameStore.swift in Sources */,
 				FC09A6FF27AF811600715D3E /* Game.swift in Sources */,

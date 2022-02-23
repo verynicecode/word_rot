@@ -10,6 +10,11 @@ struct GameView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("score: \(game.score)")
+            
+            NavigationLink("words", destination: WordsView(game: game))
+                .buttonStyle(.bordered)
+                .foregroundColor(.black)
+            
             TextField("", text: $word)
                 .textFieldStyle(.roundedBorder)
             
