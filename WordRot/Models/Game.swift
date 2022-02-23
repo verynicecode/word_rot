@@ -16,6 +16,7 @@ class Game: ObservableObject {
         guard !playedWords.contains(word) else { lastError = "word already played"; return }
         
         playedWords.append(word)
+        score += word.count
         lastError = nil
     }
 }
