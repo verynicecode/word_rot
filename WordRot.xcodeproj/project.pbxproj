@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		FC036FCB27C59F2100325826 /* GameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FCA27C59F2100325826 /* GameStore.swift */; };
 		FC036FCD27C5DAF100325826 /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FCC27C5DAF100325826 /* WordsView.swift */; };
+		FC036FD427C5F2A500325826 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FD327C5F2A500325826 /* Dictionary.swift */; };
+		FC036FD927C5F9D500325826 /* words.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = FC036FD627C5F67200325826 /* words.sqlite3 */; };
 		FC09A6FD27AF4BDB00715D3E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09A6FC27AF4BDB00715D3E /* TitleView.swift */; };
 		FC09A6FF27AF811600715D3E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09A6FE27AF811600715D3E /* Game.swift */; };
+		FC11EB7C27C69AAE00346270 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FC11EB7B27C69AAE00346270 /* SQLite */; };
 		FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74AE27A4831400779157 /* WordRotApp.swift */; };
 		FC8F74B127A4831400779157 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74B027A4831400779157 /* GameView.swift */; };
 		FC8F74B327A4831600779157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8F74B227A4831600779157 /* Assets.xcassets */; };
@@ -40,6 +43,8 @@
 /* Begin PBXFileReference section */
 		FC036FCA27C59F2100325826 /* GameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStore.swift; sourceTree = "<group>"; };
 		FC036FCC27C5DAF100325826 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
+		FC036FD327C5F2A500325826 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		FC036FD627C5F67200325826 /* words.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = words.sqlite3; sourceTree = "<group>"; };
 		FC09A6FC27AF4BDB00715D3E /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		FC09A6FE27AF811600715D3E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FC8F74AB27A4831400779157 /* WordRot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordRot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC11EB7C27C69AAE00346270 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,7 @@
 		FC036FC927C59ECD00325826 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FC036FD327C5F2A500325826 /* Dictionary.swift */,
 				FC09A6FE27AF811600715D3E /* Game.swift */,
 				FC036FCA27C59F2100325826 /* GameStore.swift */,
 			);
@@ -124,6 +131,7 @@
 				FC036FC927C59ECD00325826 /* Models */,
 				FC036FC827C59EB300325826 /* Views */,
 				FC8F74AE27A4831400779157 /* WordRotApp.swift */,
+				FC036FD627C5F67200325826 /* words.sqlite3 */,
 				FC8F74B227A4831600779157 /* Assets.xcassets */,
 				FC8F74B427A4831600779157 /* Preview Content */,
 			);
@@ -171,6 +179,9 @@
 			dependencies = (
 			);
 			name = WordRot;
+			packageProductDependencies = (
+				FC11EB7B27C69AAE00346270 /* SQLite */,
+			);
 			productName = WordRot;
 			productReference = FC8F74AB27A4831400779157 /* WordRot.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +254,9 @@
 				Base,
 			);
 			mainGroup = FC8F74A227A4831400779157;
+			packageReferences = (
+				FC11EB7A27C69AAE00346270 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = FC8F74AC27A4831400779157 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +275,7 @@
 			files = (
 				FC8F74B627A4831600779157 /* Preview Assets.xcassets in Resources */,
 				FC8F74B327A4831600779157 /* Assets.xcassets in Resources */,
+				FC036FD927C5F9D500325826 /* words.sqlite3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +304,7 @@
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
 				FC036FCD27C5DAF100325826 /* WordsView.swift in Sources */,
 				FC09A6FD27AF4BDB00715D3E /* TitleView.swift in Sources */,
+				FC036FD427C5F2A500325826 /* Dictionary.swift in Sources */,
 				FC036FCB27C59F2100325826 /* GameStore.swift in Sources */,
 				FC09A6FF27AF811600715D3E /* Game.swift in Sources */,
 			);
@@ -617,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC11EB7A27C69AAE00346270 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC11EB7B27C69AAE00346270 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC11EB7A27C69AAE00346270 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC8F74A327A4831400779157 /* Project object */;
 }
