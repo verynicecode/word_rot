@@ -7,6 +7,7 @@ let validWords = [
 
 class Game: ObservableObject {
     @Published var lastError: String?
+    @Published var score = 0
     
     var playedWords: [String] = []
     
