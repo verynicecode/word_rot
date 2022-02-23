@@ -9,6 +9,7 @@ struct GameView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
+            Text("score: \(game.score)")
             TextField("", text: $word)
                 .textFieldStyle(.roundedBorder)
             
