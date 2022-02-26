@@ -14,6 +14,12 @@
 		FC09A6FD27AF4BDB00715D3E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09A6FC27AF4BDB00715D3E /* TitleView.swift */; };
 		FC09A6FF27AF811600715D3E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09A6FE27AF811600715D3E /* Game.swift */; };
 		FC11EB7C27C69AAE00346270 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FC11EB7B27C69AAE00346270 /* SQLite */; };
+		FC11EB7E27C6BA3600346270 /* LetterBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB7D27C6BA3600346270 /* LetterBoardView.swift */; };
+		FC11EB8027C6BA9600346270 /* LetterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB7F27C6BA9600346270 /* LetterRow.swift */; };
+		FC11EB8227C6BAD200346270 /* LetterTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8127C6BAD200346270 /* LetterTile.swift */; };
+		FC11EB8427C6BB8600346270 /* LetterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8327C6BB8600346270 /* LetterBoard.swift */; };
+		FC11EB8627C6C00B00346270 /* LetterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8527C6C00B00346270 /* LetterRowView.swift */; };
+		FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8727C6C05100346270 /* LetterTileView.swift */; };
 		FC84210D27CADE620035E151 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210C27CADE620035E151 /* Color.swift */; };
 		FC84210F27CADE9D0035E151 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210E27CADE9D0035E151 /* Font.swift */; };
 		FC84211127CAE07D0035E151 /* RottenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84211027CAE07D0035E151 /* RottenButton.swift */; };
@@ -51,6 +57,12 @@
 		FC036FD627C5F67200325826 /* words.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = words.sqlite3; sourceTree = "<group>"; };
 		FC09A6FC27AF4BDB00715D3E /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		FC09A6FE27AF811600715D3E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FC11EB7D27C6BA3600346270 /* LetterBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoardView.swift; sourceTree = "<group>"; };
+		FC11EB7F27C6BA9600346270 /* LetterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterRow.swift; sourceTree = "<group>"; };
+		FC11EB8127C6BAD200346270 /* LetterTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTile.swift; sourceTree = "<group>"; };
+		FC11EB8327C6BB8600346270 /* LetterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoard.swift; sourceTree = "<group>"; };
+		FC11EB8527C6C00B00346270 /* LetterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterRowView.swift; sourceTree = "<group>"; };
+		FC11EB8727C6C05100346270 /* LetterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTileView.swift; sourceTree = "<group>"; };
 		FC84210C27CADE620035E151 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FC84210E27CADE9D0035E151 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FC84211027CAE07D0035E151 /* RottenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenButton.swift; sourceTree = "<group>"; };
@@ -99,6 +111,9 @@
 				FC8F74B027A4831400779157 /* GameView.swift */,
 				FC84211027CAE07D0035E151 /* RottenButton.swift */,
 				FC84211227CAE2550035E151 /* RottenLink.swift */,
+				FC11EB7D27C6BA3600346270 /* LetterBoardView.swift */,
+				FC11EB8527C6C00B00346270 /* LetterRowView.swift */,
+				FC11EB8727C6C05100346270 /* LetterTileView.swift */,
 				FC09A6FC27AF4BDB00715D3E /* TitleView.swift */,
 				FC036FCC27C5DAF100325826 /* WordsView.swift */,
 			);
@@ -111,6 +126,9 @@
 				FC036FD327C5F2A500325826 /* Dictionary.swift */,
 				FC09A6FE27AF811600715D3E /* Game.swift */,
 				FC036FCA27C59F2100325826 /* GameStore.swift */,
+				FC11EB8327C6BB8600346270 /* LetterBoard.swift */,
+				FC11EB7F27C6BA9600346270 /* LetterRow.swift */,
+				FC11EB8127C6BAD200346270 /* LetterTile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +338,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */,
+				FC11EB8427C6BB8600346270 /* LetterBoard.swift in Sources */,
+				FC11EB8627C6C00B00346270 /* LetterRowView.swift in Sources */,
 				FC8F74B127A4831400779157 /* GameView.swift in Sources */,
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
 				FC036FCD27C5DAF100325826 /* WordsView.swift in Sources */,
@@ -329,6 +350,9 @@
 				FC84210F27CADE9D0035E151 /* Font.swift in Sources */,
 				FC84210D27CADE620035E151 /* Color.swift in Sources */,
 				FC84211127CAE07D0035E151 /* RottenButton.swift in Sources */,
+				FC11EB8027C6BA9600346270 /* LetterRow.swift in Sources */,
+				FC11EB7E27C6BA3600346270 /* LetterBoardView.swift in Sources */,
+				FC11EB8227C6BAD200346270 /* LetterTile.swift in Sources */,
 				FC036FCB27C59F2100325826 /* GameStore.swift in Sources */,
 				FC09A6FF27AF811600715D3E /* Game.swift in Sources */,
 			);

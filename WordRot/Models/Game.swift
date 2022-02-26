@@ -4,6 +4,8 @@ class Game: ObservableObject {
     @Published var lastError: String?
     @Published var score = 0
     
+    let letterBoard = LetterBoard.start()
+    
     var playedWords: [String] = []
     
     func playWord(_ word: String) {
