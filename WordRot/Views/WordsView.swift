@@ -20,8 +20,8 @@ struct WordsView: View {
             
             Spacer()
         }
-        .padding(30)
-        .navigationBarBackButtonHidden(true)
+        .padding(20)
+        .navigationBarHidden(true)
     }
     
     func handleDonePress() {
