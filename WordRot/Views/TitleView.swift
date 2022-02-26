@@ -11,10 +11,7 @@ struct TitleView: View {
                 Text("word rot")
                     .foregroundColor(Color.complete)
                     .font(Font.futura(30))
-                NavigationLink("start", destination: gameView)
-                    .buttonStyle(.bordered)
-                    .foregroundColor(Color.white)
-                    .font(Font.futura(30))
+                RottenLink("start", destination: gameView)
             }
         }
     }

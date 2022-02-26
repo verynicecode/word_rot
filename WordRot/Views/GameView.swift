@@ -12,10 +12,7 @@ struct GameView: View {
             Text("score: \(game.score)")
                 .font(Font.futura(30))
             
-            NavigationLink("words", destination: WordsView(game: game))
-                .buttonStyle(.bordered)
-                .foregroundColor(Color.white)
-                .font(Font.futura(30))
+            RottenLink("words", destination: WordsView(game: game))
             
             TextField("", text: $word)
                 .textFieldStyle(.roundedBorder)

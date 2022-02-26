@@ -17,6 +17,7 @@
 		FC84210D27CADE620035E151 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210C27CADE620035E151 /* Color.swift */; };
 		FC84210F27CADE9D0035E151 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210E27CADE9D0035E151 /* Font.swift */; };
 		FC84211127CAE07D0035E151 /* RottenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84211027CAE07D0035E151 /* RottenButton.swift */; };
+		FC84211327CAE2550035E151 /* RottenLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84211227CAE2550035E151 /* RottenLink.swift */; };
 		FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74AE27A4831400779157 /* WordRotApp.swift */; };
 		FC8F74B127A4831400779157 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74B027A4831400779157 /* GameView.swift */; };
 		FC8F74B327A4831600779157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8F74B227A4831600779157 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		FC84210C27CADE620035E151 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FC84210E27CADE9D0035E151 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FC84211027CAE07D0035E151 /* RottenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenButton.swift; sourceTree = "<group>"; };
+		FC84211227CAE2550035E151 /* RottenLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenLink.swift; sourceTree = "<group>"; };
 		FC8F74AB27A4831400779157 /* WordRot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordRot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8F74AE27A4831400779157 /* WordRotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRotApp.swift; sourceTree = "<group>"; };
 		FC8F74B027A4831400779157 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				FC09A6FC27AF4BDB00715D3E /* TitleView.swift */,
 				FC036FCC27C5DAF100325826 /* WordsView.swift */,
 				FC84211027CAE07D0035E151 /* RottenButton.swift */,
+				FC84211227CAE2550035E151 /* RottenLink.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				FC8F74B127A4831400779157 /* GameView.swift in Sources */,
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
 				FC036FCD27C5DAF100325826 /* WordsView.swift in Sources */,
+				FC84211327CAE2550035E151 /* RottenLink.swift in Sources */,
 				FC09A6FD27AF4BDB00715D3E /* TitleView.swift in Sources */,
 				FC036FD427C5F2A500325826 /* Dictionary.swift in Sources */,
 				FC84210F27CADE9D0035E151 /* Font.swift in Sources */,
