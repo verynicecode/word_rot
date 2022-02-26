@@ -9,10 +9,20 @@ struct GameView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("score: \(game.score)")
-                .font(Font.futura(30))
-            
-            RottenLink("words", destination: WordsView(game: game))
+            HStack() {
+                RottenButton("quit", action: quitGame)
+                    .frame(width: 100, alignment: .leading)
+                
+                Spacer()
+                
+                Text(String(game.score))
+                    .font(Font.futura(60))
+                
+                Spacer()
+                
+                RottenLink("words", destination: WordsView(game: game))
+                    .frame(width: 100, alignment: .trailing)
+            }
             
             TextField("", text: $word)
                 .textFieldStyle(.roundedBorder)
@@ -20,13 +30,17 @@ struct GameView: View {
             HStack(spacing: 20) {
                 RottenButton("play", action: playWord)
                 
-                if let message = game.lastError {
-                    Text(message)
-                        .font(Font.futura(30))
-                }
+                Spacer()
+                
+                RottenButton("delete", action: deleteLetter)
             }
             
-            RottenButton("quit", action: quitGame)
+            if let message = game.lastError {
+                Text(message)
+                    .font(Font.futura(30))
+            }
+            
+            Spacer()
         }
         .padding(20)
         .navigationBarHidden(true)
@@ -38,6 +52,10 @@ struct GameView: View {
         if game.lastError == nil {
             word = ""
         }
+    }
+    
+    func deleteLetter() {
+        word.removeLast()
     }
     
     func quitGame() {
