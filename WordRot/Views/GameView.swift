@@ -21,10 +21,7 @@ struct GameView: View {
                 .textFieldStyle(.roundedBorder)
             
             HStack(spacing: 20) {
-                Button("play", action: playWord)
-                    .buttonStyle(.bordered)
-                    .foregroundColor(Color.white)
-                    .font(Font.futura(30))
+                RottenButton("play", action: playWord)
                 
                 if let message = game.lastError {
                     Text(message)
@@ -32,10 +29,7 @@ struct GameView: View {
                 }
             }
             
-            Button("quit", action: quitGame)
-                .buttonStyle(.bordered)
-                .font(Font.futura(30))
-                .foregroundColor(Color.white)
+            RottenButton("quit", action: quitGame)
         }
         .padding(20)
         .navigationBarBackButtonHidden(true)
