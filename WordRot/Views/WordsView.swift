@@ -6,7 +6,7 @@ struct WordsView: View {
     @ObservedObject var game: Game
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 30) {
+        VStack(alignment: .leading, spacing: 20) {
             HStack() {
                 Text("Played Words")
                     .font(Font.futura(30))
@@ -16,6 +16,7 @@ struct WordsView: View {
             
             ForEach(game.playedWords, id: \.self) { word in
                 Text(word)
+                    .font(Font.futura(20))
             }
             
             Spacer()
@@ -33,6 +34,6 @@ struct WordsView_Previews: PreviewProvider {
     static var previews: some View {
         let game = Game()
         game.playedWords = ["Foo", "Bar"]
-        return WordsView(game: game)
+        return WordsView(game: game).preferredColorScheme(.dark)
     }
 }

@@ -21,5 +21,6 @@ struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
         let store = GameStore()
         TitleView(store: store)
+            .preferredColorScheme(.dark)
     }
 }
