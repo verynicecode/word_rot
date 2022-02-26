@@ -25,7 +25,11 @@ struct GameView: View {
             }
             
             TextField("", text: $word)
-                .textFieldStyle(.roundedBorder)
+                .disableAutocorrection(true)
+                .textInputAutocapitalization(.never)
+                .disabled(true)
+                .overlay(Rectangle().fill(Color.complete).frame(height: 10).padding(.top, 65))
+                .font(.custom("Futura-Medium", size: 60))
             
             HStack(spacing: 20) {
                 RottenButton("play", action: playWord)
@@ -41,9 +45,21 @@ struct GameView: View {
             }
             
             Spacer()
+
+            GeometryReader { proxy in
+                VStack() {
+                    Spacer()
+                    LetterBoardView(updateWord: updateWord)
+                        .frame(width: proxy.size.width, height: proxy.size.width)
+                }
+            }
         }
         .padding(20)
         .navigationBarHidden(true)
+    }
+    
+    func updateWord(letter: String) {
+        word += letter.uppercased()
     }
     
     func playWord() {
