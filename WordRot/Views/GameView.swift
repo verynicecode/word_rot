@@ -50,5 +50,6 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         let game = Game()
         GameView(game: game)
+            .preferredColorScheme(.dark)
     }
 }
