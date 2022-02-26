@@ -8,10 +8,13 @@ struct TitleView: View {
         
         NavigationView {
             VStack {
-                Text("word rot").foregroundColor(.black)
+                Text("word rot")
+                    .foregroundColor(Color.complete)
+                    .font(Font.futura(30))
                 NavigationLink("start", destination: gameView)
                     .buttonStyle(.bordered)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color.white)
+                    .font(Font.futura(30))
             }
         }
     }
