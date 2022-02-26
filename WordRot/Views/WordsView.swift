@@ -9,10 +9,12 @@ struct WordsView: View {
         VStack(alignment: .leading, spacing: 30) {
             HStack() {
                 Text("Played Words")
+                    .font(Font.futura(30))
                 Spacer()
                 Button("done", action: handleDonePress)
                     .buttonStyle(.bordered)
-                    .foregroundColor(.black)
+                    .font(Font.futura(30))
+                    .foregroundColor(Color.white)
             }
             
             ForEach(game.playedWords, id: \.self) { word in

@@ -12,7 +12,7 @@ struct WordRotApp: App {
     var body: some Scene {
         WindowGroup {
             TitleView(store: GameStore.shared)
-                .preferredColorScheme(.light)
+                .preferredColorScheme(.dark)
         }
     }
 }

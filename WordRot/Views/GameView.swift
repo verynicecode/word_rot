@@ -10,31 +10,32 @@ struct GameView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("score: \(game.score)")
+                .font(Font.futura(30))
             
             NavigationLink("words", destination: WordsView(game: game))
                 .buttonStyle(.bordered)
-                .foregroundColor(.black)
+                .foregroundColor(Color.white)
+                .font(Font.futura(30))
             
             TextField("", text: $word)
                 .textFieldStyle(.roundedBorder)
             
             HStack(spacing: 20) {
-                Button(action: playWord) {
-                    Text("play")
-                }
-                .buttonStyle(.bordered)
-                .foregroundColor(.black)
+                Button("play", action: playWord)
+                    .buttonStyle(.bordered)
+                    .foregroundColor(Color.white)
+                    .font(Font.futura(30))
                 
                 if let message = game.lastError {
-                  Text(message)
+                    Text(message)
+                        .font(Font.futura(30))
                 }
             }
             
-            Button(action: quitGame) {
-                Text("quit")
-            }
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
+            Button("quit", action: quitGame)
+                .buttonStyle(.bordered)
+                .font(Font.futura(30))
+                .foregroundColor(Color.white)
         }
         .padding(20)
         .navigationBarBackButtonHidden(true)
