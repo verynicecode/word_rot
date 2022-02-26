@@ -29,7 +29,7 @@ struct GameView: View {
             RottenButton("quit", action: quitGame)
         }
         .padding(20)
-        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
     
     func playWord() {
