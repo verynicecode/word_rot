@@ -11,10 +11,7 @@ struct WordsView: View {
                 Text("Played Words")
                     .font(Font.futura(30))
                 Spacer()
-                Button("done", action: handleDonePress)
-                    .buttonStyle(.bordered)
-                    .font(Font.futura(30))
-                    .foregroundColor(Color.white)
+                RottenButton("done", action: handleDonePress)
             }
             
             ForEach(game.playedWords, id: \.self) { word in
