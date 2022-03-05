@@ -49,7 +49,7 @@ struct GameView: View {
             GeometryReader { proxy in
                 VStack() {
                     Spacer()
-                    LetterBoardView(updateWord: updateWord)
+                    LetterBoardView(deleteLetter: deleteLetter, updateWord: updateWord)
                         .frame(width: proxy.size.width, height: proxy.size.width)
                 }
             }
@@ -75,6 +75,7 @@ struct GameView: View {
     func deleteLetter() {
         guard word != "" else { return }
         
+        game.letterBoard.removeLastRacked()
         word.removeLast()
     }
     
