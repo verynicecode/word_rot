@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct LetterRowsView: View {
+    let deleteLetter: () -> Void
     let updateWord: (String) -> Void
     
     var letterRows: [LetterRow] {
@@ -10,13 +11,14 @@ struct LetterRowsView: View {
     var body: some View {
         VStack(spacing: 0) {
             ForEach(letterRows) { letterRow in
-                LetterRowView(letterRow: letterRow, updateWord: updateWord)
+                LetterRowView(letterRow: letterRow, deleteLetter: deleteLetter, updateWord: updateWord)
             }
         }
     }
 }
 
 struct LetterBoardView: View {
+    let deleteLetter: () -> Void
     let updateWord: (String) -> Void
     
     var letterRows: [LetterRow] {
@@ -26,7 +28,7 @@ struct LetterBoardView: View {
     var body: some View {
         ZStack() {
             CirclesView()
-            LetterRowsView(updateWord: updateWord)
+            LetterRowsView(deleteLetter: deleteLetter, updateWord: updateWord)
                 .background(.ultraThinMaterial)
         }
         .clipped()
@@ -35,8 +37,9 @@ struct LetterBoardView: View {
 
 struct LetterBoardView_Previews: PreviewProvider {
     static var previews: some View {
+        func noop() {}
         func noop(s: String) {}
-        return LetterBoardView(updateWord: noop)
+        return LetterBoardView(deleteLetter: noop, updateWord: noop)
             .preferredColorScheme(.dark)
             .frame(width: 300, height: 300)
     }

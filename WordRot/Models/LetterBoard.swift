@@ -42,8 +42,20 @@ class LetterBoard {
     }
     
     let letterRows: [LetterRow]
+    var rackedLetters: [LetterTile] = []
     
     init(letterRows: [LetterRow]) {
         self.letterRows = letterRows
+    }
+    
+    func rackLetter(letterTile: LetterTile) {
+        rackedLetters.append(letterTile)
+    }
+    
+    func removeLastRacked() {
+        guard let lastRacked = rackedLetters.last else { return }
+        
+        lastRacked.racked.toggle()
+        rackedLetters.removeLast()
     }
 }

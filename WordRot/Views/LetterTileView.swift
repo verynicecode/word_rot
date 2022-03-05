@@ -13,6 +13,7 @@ struct LetterTileView: View {
     @State private var animateGradient = false
     @ObservedObject var letterTile: LetterTile
     
+    let deleteLetter: () -> Void
     let updateWord: (String) -> Void
     
     var opacity: CGFloat {
@@ -38,8 +39,13 @@ struct LetterTileView: View {
     }
     
     func handlePress() {
-        // maybe what i do here is invoke a func from the GameView so that it can update its `word` property?
-        updateWord(letterTile.letter)
+        if letterTile.racked {
+            deleteLetter()
+        } else {
+            GameStore.shared.currentGame.letterBoard.rackLetter(letterTile: letterTile)
+            updateWord(letterTile.letter)
+        }
+        
         letterTile.update()
     }
 }
