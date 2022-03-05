@@ -31,6 +31,8 @@
 		FC8F74C027A4831600779157 /* WordRotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74BF27A4831600779157 /* WordRotTests.swift */; };
 		FC8F74CA27A4831600779157 /* WordRotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74C927A4831600779157 /* WordRotUITests.swift */; };
 		FC8F74CC27A4831600779157 /* WordRotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74CB27A4831600779157 /* WordRotUITestsLaunchTests.swift */; };
+		FCF464C327CAEEA5009E467B /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF464C227CAEEA5009E467B /* CirclesView.swift */; };
+		FCF464C527CAEF09009E467B /* RottenCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF464C427CAEF09009E467B /* RottenCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		FC8F74C527A4831600779157 /* WordRotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordRotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8F74C927A4831600779157 /* WordRotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRotUITests.swift; sourceTree = "<group>"; };
 		FC8F74CB27A4831600779157 /* WordRotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCF464C227CAEEA5009E467B /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
+		FCF464C427CAEF09009E467B /* RottenCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		FC036FC827C59EB300325826 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FCF464C227CAEEA5009E467B /* CirclesView.swift */,
 				FC8F74B027A4831400779157 /* GameView.swift */,
 				FC11EB7D27C6BA3600346270 /* LetterBoardView.swift */,
 				FC11EB8527C6C00B00346270 /* LetterRowView.swift */,
@@ -116,6 +121,7 @@
 				FC84211227CAE2550035E151 /* RottenLink.swift */,
 				FC09A6FC27AF4BDB00715D3E /* TitleView.swift */,
 				FC036FCC27C5DAF100325826 /* WordsView.swift */,
+				FCF464C427CAEF09009E467B /* RottenCircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 			files = (
 				FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */,
 				FC11EB8427C6BB8600346270 /* LetterBoard.swift in Sources */,
+				FCF464C327CAEEA5009E467B /* CirclesView.swift in Sources */,
 				FC11EB8627C6C00B00346270 /* LetterRowView.swift in Sources */,
 				FC8F74B127A4831400779157 /* GameView.swift in Sources */,
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
@@ -352,6 +359,7 @@
 				FC84211127CAE07D0035E151 /* RottenButton.swift in Sources */,
 				FC11EB8027C6BA9600346270 /* LetterRow.swift in Sources */,
 				FC11EB7E27C6BA3600346270 /* LetterBoardView.swift in Sources */,
+				FCF464C527CAEF09009E467B /* RottenCircleView.swift in Sources */,
 				FC11EB8227C6BAD200346270 /* LetterTile.swift in Sources */,
 				FC036FCB27C59F2100325826 /* GameStore.swift in Sources */,
 				FC09A6FF27AF811600715D3E /* Game.swift in Sources */,
