@@ -8,10 +8,14 @@ struct TitleView: View {
         
         NavigationView {
             VStack {
-                Text("word rot")
+                Text("word rot".uppercased())
                     .foregroundColor(Color.complete)
+                    .font(Font.futura(60))
+                Text("spell words, avoid rot")
                     .font(Font.futura(30))
+                Spacer()
                 RottenLink("start", destination: gameView)
+                Spacer()
             }
         }
     }
