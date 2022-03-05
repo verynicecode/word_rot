@@ -10,6 +10,7 @@ class Game: ObservableObject {
     
     func playWord(_ word: String) {
         guard !playedWords.contains(word) else { lastError = "word already played"; return }
+        guard word.count > 3 else { lastError = "word too short"; return }
         guard Dictionary.shared.isValid(word) else { lastError = "word not found"; return }
         
         playedWords.append(word)
