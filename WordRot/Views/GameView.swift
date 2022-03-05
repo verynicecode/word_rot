@@ -63,6 +63,8 @@ struct GameView: View {
     }
     
     func playWord() {
+        guard word != "" else { return }
+        
         game.playWord(word.lowercased())
         
         if game.lastError == nil {
@@ -71,6 +73,8 @@ struct GameView: View {
     }
     
     func deleteLetter() {
+        guard word != "" else { return }
+        
         word.removeLast()
     }
     
