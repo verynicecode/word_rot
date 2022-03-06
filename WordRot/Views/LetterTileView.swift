@@ -44,9 +44,8 @@ struct LetterTileView: View {
         } else {
             GameStore.shared.currentGame.letterBoard.rackLetter(letterTile: letterTile)
             updateWord(letterTile.letter)
+            letterTile.update()
         }
-        
-        letterTile.update()
     }
 }
 
