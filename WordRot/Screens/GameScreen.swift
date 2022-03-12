@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct GameView: View {
+struct GameScreen: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var word: String = ""
@@ -20,7 +20,7 @@ struct GameView: View {
                 
                 Spacer()
                 
-                RottenLink("words", destination: WordsView(game: game))
+                RottenLink("words", destination: RoundsScreen(game: game))
                     .frame(width: 100, alignment: .trailing)
             }
             
@@ -85,10 +85,10 @@ struct GameView: View {
     }
 }
 
-struct GameView_Previews: PreviewProvider {
+struct GameScreen_Previews: PreviewProvider {
     static var previews: some View {
         let game = Game()
-        GameView(game: game)
+        GameScreen(game: game)
             .preferredColorScheme(.dark)
     }
 }

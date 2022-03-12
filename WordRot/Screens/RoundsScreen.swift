@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WordsView: View {
+struct RoundsScreen: View {
     @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var game: Game
@@ -30,10 +30,10 @@ struct WordsView: View {
     }
 }
 
-struct WordsView_Previews: PreviewProvider {
+struct RoundsScreen_Previews: PreviewProvider {
     static var previews: some View {
         let game = Game()
         game.playedWords = ["Foo", "Bar"]
-        return WordsView(game: game).preferredColorScheme(.dark)
+        return RoundsScreen(game: game).preferredColorScheme(.dark)
     }
 }

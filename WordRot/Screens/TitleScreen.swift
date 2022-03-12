@@ -1,10 +1,10 @@
 import SwiftUI
 
-struct TitleView: View {
+struct TitleScreen: View {
     @ObservedObject var store: GameStore
     
     var body: some View {
-        let gameView = GameView(game: store.currentGame)
+        let gameView = GameScreen(game: store.currentGame)
         
         NavigationView {
             VStack {
@@ -21,10 +21,10 @@ struct TitleView: View {
     }
 }
 
-struct TitleView_Previews: PreviewProvider {
+struct TitleScreen_Previews: PreviewProvider {
     static var previews: some View {
         let store = GameStore()
-        TitleView(store: store)
+        TitleScreen(store: store)
             .preferredColorScheme(.dark)
     }
 }
