@@ -11,7 +11,7 @@ import SwiftUI
 struct WordRotApp: App {
     var body: some Scene {
         WindowGroup {
-            TitleView(store: GameStore.shared)
+            TitleScreen(store: GameStore.shared)
                 .preferredColorScheme(.dark)
         }
     }
