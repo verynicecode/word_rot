@@ -7,7 +7,7 @@ class Dictionary {
     private let client: Connection
     
     init() {
-        let location = Bundle.main.path(forResource: "words.sqlite3", ofType: nil)!
+        let location = Bundle.main.path(forResource: "rotten.sqlite3", ofType: nil)!
         let client = try! Connection(location)
         self.client = client
     }
