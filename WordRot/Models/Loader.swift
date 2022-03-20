@@ -3,7 +3,7 @@ import SQLite
 
 struct Loader {
     static func check(pass passCallback: () -> Void, fail failCallback: () -> Void) {
-        databaseStuff()
+        RottenDB.ensureDatabaseFile()
         killswitchStuff(pass: passCallback, fail: failCallback)
     }
     
@@ -24,19 +24,5 @@ struct Loader {
         
         let callback = killswitch.verify(buildNumber) ? passCallback : failCallback
         callback()
-    }
-    
-    static func databaseStuff() {
-        let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let destinationPath = documentsUrl.appendingPathComponent("rotten.sqlite3").path
-        
-        guard !FileManager.default.fileExists(atPath: destinationPath) else { return }
-        
-        do {
-            let sourcePath = Bundle.main.path(forResource: "rotten.sqlite3", ofType: nil)!
-            try FileManager.default.copyItem(atPath: sourcePath, toPath: destinationPath)
-        } catch {
-            print("error during file copy: \(error)")
-        }
     }
 }
