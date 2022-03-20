@@ -7,7 +7,9 @@ class Dictionary {
     private let client: Connection
     
     init() {
-        let location = Bundle.main.path(forResource: "rotten.sqlite3", ofType: nil)!
+        let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let location = documentsUrl.appendingPathComponent("rotten.sqlite3").path
+        
         let client = try! Connection(location)
         self.client = client
     }
