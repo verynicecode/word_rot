@@ -30,6 +30,15 @@ class RottenDB {
         }
     }
     
+    static func runMigrations(client: Connection) {
+        let currentVersion = client.userVersion!
+        let migrations = [
+            CreateGamesMigration.self
+        ]
+        let missingMigrations = migrations.filter { $0.order > currentVersion }
+        missingMigrations.forEach { $0.run(client: client) }
+    }
+    
     static func establishConnection() -> Connection {
         return try! Connection(rottenDbPath)
     }
@@ -38,6 +47,8 @@ class RottenDB {
     
     init() {
         RottenDB.ensureDatabaseFile()
-        self.client = RottenDB.establishConnection()
+        let client = RottenDB.establishConnection()
+        RottenDB.runMigrations(client: client)
+        self.client = client
     }
 }
