@@ -23,6 +23,7 @@
 		FC462C8427E6849F001B1B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */; };
 		FC462C8627E79500001B1B10 /* Killswitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8527E79500001B1B10 /* Killswitch.swift */; };
 		FC462C8827E7954B001B1B10 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8727E7954B001B1B10 /* Loader.swift */; };
+		FC462C8B27E7BD63001B1B10 /* RottenDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8A27E7BD63001B1B10 /* RottenDB.swift */; };
 		FC5FB12627D536B50042FBCC /* BoardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FB12527D536B50042FBCC /* BoardMaker.swift */; };
 		FC84210D27CADE620035E151 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210C27CADE620035E151 /* Color.swift */; };
 		FC84210F27CADE9D0035E151 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210E27CADE9D0035E151 /* Font.swift */; };
@@ -74,6 +75,7 @@
 		FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC462C8527E79500001B1B10 /* Killswitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Killswitch.swift; sourceTree = "<group>"; };
 		FC462C8727E7954B001B1B10 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		FC462C8A27E7BD63001B1B10 /* RottenDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenDB.swift; sourceTree = "<group>"; };
 		FC5FB12527D536B50042FBCC /* BoardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardMaker.swift; sourceTree = "<group>"; };
 		FC84210C27CADE620035E151 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FC84210E27CADE9D0035E151 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FC462C8927E7BD53001B1B10 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FC462C8A27E7BD63001B1B10 /* RottenDB.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		FC84210B27CADE540035E151 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 		FC8F74AD27A4831400779157 /* WordRot */ = {
 			isa = PBXGroup;
 			children = (
+				FC462C8927E7BD53001B1B10 /* Database */,
 				FC8F74B227A4831600779157 /* Assets.xcassets */,
 				FC84210B27CADE540035E151 /* Extensions */,
 				FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */,
@@ -377,6 +388,7 @@
 				FC11EB8627C6C00B00346270 /* LetterRowView.swift in Sources */,
 				FC8F74B127A4831400779157 /* GameScreen.swift in Sources */,
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
+				FC462C8B27E7BD63001B1B10 /* RottenDB.swift in Sources */,
 				FC036FCD27C5DAF100325826 /* RoundsScreen.swift in Sources */,
 				FC5FB12627D536B50042FBCC /* BoardMaker.swift in Sources */,
 				FC84211327CAE2550035E151 /* RottenLink.swift in Sources */,
