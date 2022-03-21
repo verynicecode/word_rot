@@ -2,16 +2,18 @@ import Foundation
 import SQLite
 
 private let sql = """
-create table if not exists games(
+create table if not exists rounds(
   id integer primary key,
-  status string,
+  game_id integer,
+  word string,
+  number integer,
   created_at default current_timestamp,
   updated_at default current_timestamp
 )
 """
 
-struct CreateGamesMigration: Migration {
-    let order: Int32 = 1
+struct CreateRoundsMigration: Migration {
+    let order: Int32 = 2
     
     func run(client: Connection) {
         try! client.execute(sql)
