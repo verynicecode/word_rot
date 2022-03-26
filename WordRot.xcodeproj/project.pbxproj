@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC00B1ED27E947ED009843F3 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC00B1EC27E947ED009843F3 /* Round.swift */; };
 		FC036FCB27C59F2100325826 /* GameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FCA27C59F2100325826 /* GameStore.swift */; };
 		FC036FCD27C5DAF100325826 /* RoundsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FCC27C5DAF100325826 /* RoundsScreen.swift */; };
 		FC036FD427C5F2A500325826 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC036FD327C5F2A500325826 /* Dictionary.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC00B1EC27E947ED009843F3 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		FC036FCA27C59F2100325826 /* GameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStore.swift; sourceTree = "<group>"; };
 		FC036FCC27C5DAF100325826 /* RoundsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsScreen.swift; sourceTree = "<group>"; };
 		FC036FD327C5F2A500325826 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				FC11EB7F27C6BA9600346270 /* LetterRow.swift */,
 				FC11EB8127C6BAD200346270 /* LetterTile.swift */,
 				FC462C8727E7954B001B1B10 /* Loader.swift */,
+				FC00B1EC27E947ED009843F3 /* Round.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			files = (
 				FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */,
 				FC11EB8427C6BB8600346270 /* LetterBoard.swift in Sources */,
+				FC00B1ED27E947ED009843F3 /* Round.swift in Sources */,
 				FCF464C327CAEEA5009E467B /* CirclesView.swift in Sources */,
 				FC11EB8627C6C00B00346270 /* LetterRowView.swift in Sources */,
 				FC8F74B127A4831400779157 /* GameScreen.swift in Sources */,
