@@ -29,6 +29,8 @@
 		FC462C9027E7CB63001B1B10 /* 2-CreateRoundsMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8F27E7CB63001B1B10 /* 2-CreateRoundsMigration.swift */; };
 		FC462C9227E7CC74001B1B10 /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C9127E7CC74001B1B10 /* Migration.swift */; };
 		FC5FB12627D536B50042FBCC /* BoardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FB12527D536B50042FBCC /* BoardMaker.swift */; };
+		FC6A792527EF6BE0001272DA /* ScoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A792427EF6BE0001272DA /* ScoresScreen.swift */; };
+		FC6A792727F0FF51001272DA /* RottenRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A792627F0FF51001272DA /* RottenRecord.swift */; };
 		FC84210D27CADE620035E151 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210C27CADE620035E151 /* Color.swift */; };
 		FC84210F27CADE9D0035E151 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84210E27CADE9D0035E151 /* Font.swift */; };
 		FC84211127CAE07D0035E151 /* RottenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84211027CAE07D0035E151 /* RottenButton.swift */; };
@@ -85,6 +87,8 @@
 		FC462C8F27E7CB63001B1B10 /* 2-CreateRoundsMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2-CreateRoundsMigration.swift"; sourceTree = "<group>"; };
 		FC462C9127E7CC74001B1B10 /* Migration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
 		FC5FB12527D536B50042FBCC /* BoardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardMaker.swift; sourceTree = "<group>"; };
+		FC6A792427EF6BE0001272DA /* ScoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScreen.swift; sourceTree = "<group>"; };
+		FC6A792627F0FF51001272DA /* RottenRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenRecord.swift; sourceTree = "<group>"; };
 		FC84210C27CADE620035E151 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FC84210E27CADE9D0035E151 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FC84211027CAE07D0035E151 /* RottenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenButton.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				FC11EB7F27C6BA9600346270 /* LetterRow.swift */,
 				FC11EB8127C6BAD200346270 /* LetterTile.swift */,
 				FC462C8727E7954B001B1B10 /* Loader.swift */,
+				FC6A792627F0FF51001272DA /* RottenRecord.swift */,
 				FC00B1EC27E947ED009843F3 /* Round.swift */,
 			);
 			path = Models;
@@ -194,10 +199,11 @@
 			isa = PBXGroup;
 			children = (
 				FC8F74B027A4831400779157 /* GameScreen.swift */,
-				FC036FCC27C5DAF100325826 /* RoundsScreen.swift */,
-				FC09A6FC27AF4BDB00715D3E /* TitleScreen.swift */,
-				FC861A4B27DD42AB005CE3F3 /* SplashScreen.swift */,
 				FC861A4D27DD431E005CE3F3 /* RootScreen.swift */,
+				FC036FCC27C5DAF100325826 /* RoundsScreen.swift */,
+				FC6A792427EF6BE0001272DA /* ScoresScreen.swift */,
+				FC861A4B27DD42AB005CE3F3 /* SplashScreen.swift */,
+				FC09A6FC27AF4BDB00715D3E /* TitleScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				FC8F74AF27A4831400779157 /* WordRotApp.swift in Sources */,
 				FC462C8B27E7BD63001B1B10 /* RottenDB.swift in Sources */,
 				FC036FCD27C5DAF100325826 /* RoundsScreen.swift in Sources */,
+				FC6A792727F0FF51001272DA /* RottenRecord.swift in Sources */,
 				FC5FB12627D536B50042FBCC /* BoardMaker.swift in Sources */,
 				FC84211327CAE2550035E151 /* RottenLink.swift in Sources */,
 				FC861A4C27DD42AB005CE3F3 /* SplashScreen.swift in Sources */,
@@ -418,6 +425,7 @@
 				FC462C9227E7CC74001B1B10 /* Migration.swift in Sources */,
 				FC09A6FD27AF4BDB00715D3E /* TitleScreen.swift in Sources */,
 				FC036FD427C5F2A500325826 /* Dictionary.swift in Sources */,
+				FC6A792527EF6BE0001272DA /* ScoresScreen.swift in Sources */,
 				FC462C8E27E7C4B7001B1B10 /* 1-CreateGamesMigration.swift in Sources */,
 				FC84210F27CADE9D0035E151 /* Font.swift in Sources */,
 				FC462C8827E7954B001B1B10 /* Loader.swift in Sources */,

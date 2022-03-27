@@ -21,12 +21,16 @@ class Game: ObservableObject {
         guard word.count > 3 else { lastError = "word too short"; return }
         guard Dictionary.isValid(word) else { lastError = "word not found"; return }
         
-        let nextRoundNumber = playedWords.count + 1
-        let round = Round(gameId: id, word: word, number: nextRoundNumber)
-        rounds.append(round)
+        Round.createFromGame(self, word: word)
         
         playedWords.append(word)
         score += word.count
         lastError = nil
+        
+        refetch()
+    }
+    
+    func refetch() {
+        self.rounds = Round.findByGame(self)
     }
 }

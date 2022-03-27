@@ -4,7 +4,7 @@ struct TitleScreen: View {
     @ObservedObject var store: GameStore
     
     var body: some View {
-        let gameView = GameScreen(game: store.currentGame)
+        let gameScreen = GameScreen(game: store.currentGame)
         
         NavigationView {
             VStack {
@@ -14,7 +14,9 @@ struct TitleScreen: View {
                 Text("spell words, avoid rot")
                     .font(Font.futura(30))
                 Spacer()
-                RottenLink("start", destination: gameView)
+                RottenLink("start", destination: gameScreen)
+                Spacer().frame(height: 30)
+                RottenLink("scores", destination: ScoresScreen())
                 Spacer()
             }
         }
