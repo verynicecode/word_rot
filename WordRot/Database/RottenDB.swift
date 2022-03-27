@@ -52,4 +52,10 @@ class RottenDB {
         RottenDB.runMigrations(client: client)
         self.client = client
     }
+    
+    func selectRows(_ selectSql: String, _ bindings: [Binding] = []) -> [[Binding]] {
+        guard let statement = try? client.run(selectSql, bindings) else { return [] }
+        let rows = statement.compactMap() { element in element.compactMap() { bindings in bindings } }
+        return rows
+    }
 }
