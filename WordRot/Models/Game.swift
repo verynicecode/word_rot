@@ -4,7 +4,7 @@ class Game: ObservableObject {
     @Published var lastError: String?
     @Published var score: Int
     
-    let letterBoard = LetterBoard.start()
+    let letterBoard: LetterBoard
     
     var rounds: [Round]
     var record: GameRecord
@@ -30,6 +30,7 @@ class Game: ObservableObject {
         self.record = record
         self.rounds = rounds
         self.score = rounds.map { $0.record.word.count }.reduce(0, +)
+        self.letterBoard = LetterBoard.findOrCreate(gameId: record.id)
     }
     
     func playWord(_ word: String) {

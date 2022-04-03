@@ -75,7 +75,8 @@ struct GameScreen: View {
     func deleteLetter() {
         guard word != "" else { return }
         
-        game.letterBoard.removeLastRacked()
+        // this should really be hitting the controller not the models directly
+//        game.letterBoard.removeLastRacked()
         word.removeLast()
     }
     

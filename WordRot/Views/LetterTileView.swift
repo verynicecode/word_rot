@@ -42,7 +42,8 @@ struct LetterTileView: View {
         if tile.racked {
             deleteLetter()
         } else {
-            GameStore.shared.game.letterBoard.rackLetter(tile: tile)
+            // this should really be hitting the controller
+//            GameStore.shared.game.letterBoard.rackLetter(tile: tile)
             updateWord(tile.letter)
             tile.update()
         }
