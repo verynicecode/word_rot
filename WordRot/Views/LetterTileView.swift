@@ -30,7 +30,7 @@ struct LetterTileView: View {
         
         Button(action: handlePress) {
             Text(tile.letter.uppercased())
-                .font(.custom("Futura-Medium", size: 40))
+                .font(.futura(40))
                 .foregroundColor(Color.white)
                 .shadow(color: Color.black, radius: 8)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
