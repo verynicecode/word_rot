@@ -1,9 +1,9 @@
 import Foundation
 
 class LetterRow: Identifiable {
-    let letterTiles: [LetterTile]
+    let tiles: [Tile]
     
-    init(letterTiles: [LetterTile]) {
-        self.letterTiles = letterTiles
+    init(tiles: [Tile]) {
+        self.tiles = tiles
     }
 }

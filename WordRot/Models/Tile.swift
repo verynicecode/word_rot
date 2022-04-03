@@ -1,6 +1,6 @@
 import Foundation
 
-class LetterTile: ObservableObject, Identifiable {
+class Tile: ObservableObject, Identifiable {
     @Published var letter: String
     @Published var rotLevel: Int
     @Published var racked = false
