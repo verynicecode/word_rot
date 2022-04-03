@@ -34,7 +34,8 @@ class RottenDB {
         let currentVersion = client.userVersion!
         let migrations: [Migration] = [
             CreateGamesMigration(),
-            CreateRoundsMigration()
+            CreateRoundsMigration(),
+            CreateTilesMigration()
         ]
         let missingMigrations = migrations.filter { $0.order > currentVersion }
         missingMigrations.forEach { $0.run(client: client) }

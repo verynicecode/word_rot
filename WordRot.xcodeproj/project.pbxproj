@@ -21,6 +21,7 @@
 		FC11EB8427C6BB8600346270 /* LetterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8327C6BB8600346270 /* LetterBoard.swift */; };
 		FC11EB8627C6C00B00346270 /* LetterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8527C6C00B00346270 /* LetterRowView.swift */; };
 		FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8727C6C05100346270 /* LetterTileView.swift */; };
+		FC3B587027FA0C8900DBDF65 /* 3-CreateTilesMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B586F27FA0C8900DBDF65 /* 3-CreateTilesMigration.swift */; };
 		FC462C8427E6849F001B1B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */; };
 		FC462C8627E79500001B1B10 /* Killswitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8527E79500001B1B10 /* Killswitch.swift */; };
 		FC462C8827E7954B001B1B10 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8727E7954B001B1B10 /* Loader.swift */; };
@@ -79,6 +80,7 @@
 		FC11EB8327C6BB8600346270 /* LetterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoard.swift; sourceTree = "<group>"; };
 		FC11EB8527C6C00B00346270 /* LetterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterRowView.swift; sourceTree = "<group>"; };
 		FC11EB8727C6C05100346270 /* LetterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTileView.swift; sourceTree = "<group>"; };
+		FC3B586F27FA0C8900DBDF65 /* 3-CreateTilesMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3-CreateTilesMigration.swift"; sourceTree = "<group>"; };
 		FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC462C8527E79500001B1B10 /* Killswitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Killswitch.swift; sourceTree = "<group>"; };
 		FC462C8727E7954B001B1B10 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				FC462C8D27E7C4B7001B1B10 /* 1-CreateGamesMigration.swift */,
 				FC462C8F27E7CB63001B1B10 /* 2-CreateRoundsMigration.swift */,
+				FC3B586F27FA0C8900DBDF65 /* 3-CreateTilesMigration.swift */,
 				FC462C9127E7CC74001B1B10 /* Migration.swift */,
 			);
 			path = Migrations;
@@ -446,6 +449,7 @@
 				FC84210F27CADE9D0035E151 /* Font.swift in Sources */,
 				FC462C8827E7954B001B1B10 /* Loader.swift in Sources */,
 				FC861A4E27DD431E005CE3F3 /* RootScreen.swift in Sources */,
+				FC3B587027FA0C8900DBDF65 /* 3-CreateTilesMigration.swift in Sources */,
 				FC84210D27CADE620035E151 /* Color.swift in Sources */,
 				FC84211127CAE07D0035E151 /* RottenButton.swift in Sources */,
 				FC11EB8027C6BA9600346270 /* LetterRow.swift in Sources */,
