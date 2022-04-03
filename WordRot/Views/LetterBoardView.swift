@@ -5,7 +5,7 @@ struct LetterRowsView: View {
     let updateWord: (String) -> Void
     
     var letterRows: [LetterRow] {
-        return GameStore.shared.currentGame.letterBoard.letterRows
+        return GameStore.shared.game.letterBoard.letterRows
     }
     
     var body: some View {
@@ -22,7 +22,7 @@ struct LetterBoardView: View {
     let updateWord: (String) -> Void
     
     var letterRows: [LetterRow] {
-        return GameStore.shared.currentGame.letterBoard.letterRows
+        return GameStore.shared.game.letterBoard.letterRows
     }
     
     var body: some View {

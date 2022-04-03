@@ -3,19 +3,19 @@ import Foundation
 class GameStore: ObservableObject {
     static let shared = GameStore()
     
-    @Published var currentGame: Game
-    
-    var games: [Game]
-    
+    @Published var game: Game
+        
     init() {
-        let firstGame = Game()
-        self.games = [firstGame]
-        self.currentGame = firstGame
+        self.game = Game.findOrCreate()
     }
     
-    func endCurrentGame() {
-        let newGame = Game()
-        self.games.append(newGame)
-        self.currentGame = newGame
+    // this isn't being called because the button is actually a link that navigates
+    func start() {
+        game.start()
+    }
+    
+    func finish() {
+        game.finish()
+        game.create()
     }
 }

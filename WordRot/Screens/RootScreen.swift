@@ -6,7 +6,7 @@ struct RootScreen: View {
     
     var body: some View {
         ZStack {
-            TitleScreen(store: GameStore.shared)
+            TitleScreen()
             SplashScreen()
                 .opacity(isLoading ? 1 : 0)
                 .task {

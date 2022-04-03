@@ -5,7 +5,7 @@ struct GameScreen: View {
     
     @State private var word: String = ""
     
-    @ObservedObject var game: Game
+    @ObservedObject var game: Game = GameStore.shared.game
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -80,15 +80,15 @@ struct GameScreen: View {
     }
     
     func quitGame() {
-        GameStore.shared.endCurrentGame()
+        GameStore.shared.finish()
         dismiss()
     }
 }
 
-struct GameScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        let game = Game()
-        GameScreen(game: game)
-            .preferredColorScheme(.dark)
-    }
-}
+//struct GameScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let game = Game()
+//        GameScreen(game: game)
+//            .preferredColorScheme(.dark)
+//    }
+//}

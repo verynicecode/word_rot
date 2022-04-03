@@ -30,10 +30,10 @@ struct RoundsScreen: View {
     }
 }
 
-struct RoundsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        let game = Game()
-        game.playedWords = ["Foo", "Bar"]
-        return RoundsScreen(game: game).preferredColorScheme(.dark)
-    }
-}
+//struct RoundsScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let game = Game()
+//        game.playedWords = ["Foo", "Bar"]
+//        return RoundsScreen(game: game).preferredColorScheme(.dark)
+//    }
+//}
