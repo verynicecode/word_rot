@@ -205,9 +205,9 @@
 		FC84210B27CADE540035E151 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FC3B587827FA399D00DBDF65 /* Array.swift */,
 				FC84210C27CADE620035E151 /* Color.swift */,
 				FC84210E27CADE9D0035E151 /* Font.swift */,
-				FC3B587827FA399D00DBDF65 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

@@ -20,16 +20,7 @@ class LetterBoard {
         
         for (row, letters) in data.enumerated() {
             for (column, letterPair) in letters.enumerated() {
-                let sql = "INSERT INTO tiles(game_id, row, column, letter, decomp) VALUES(?, ?, ?, ?, ?);"
-                let bindings: [Binding] = [
-                    gameId,
-                    row,
-                    column,
-                    letterPair.0,
-                    letterPair.1
-                ]
-                
-                try! RottenDB.sharedClient.run(sql, bindings)
+                TileRecord.create(gameId: gameId, row: row, column: column, letter: letterPair.0, decomp: letterPair.1)
             }
         }
     }
