@@ -3,7 +3,7 @@ import SQLite
 
 class Round: RottenRecord {
     static let findByGameSql = "SELECT * FROM rounds WHERE game_id = ?;"
-    static let createSql = "INSERT INTO rounds(game_id, word, number) VALUES (?, ?, ?);"
+    static let createSql = "INSERT INTO rounds(game_id, word, number) VALUES(?, ?, ?);"
     
     let id: Int
     let gameId: Int

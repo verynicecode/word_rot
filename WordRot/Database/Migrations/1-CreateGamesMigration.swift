@@ -2,11 +2,11 @@ import Foundation
 import SQLite
 
 private let sql = """
-create table if not exists games(
-  id integer primary key,
-  status string,
-  created_at default current_timestamp,
-  updated_at default current_timestamp
+CREATE TABLE IF NOT EXISTS games(
+  id INTEGER PRIMARY KEY,
+  status STRING,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
 """
 

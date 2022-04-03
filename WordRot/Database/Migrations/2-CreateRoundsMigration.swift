@@ -2,13 +2,13 @@ import Foundation
 import SQLite
 
 private let sql = """
-create table if not exists rounds(
-  id integer primary key,
-  game_id integer,
-  word string,
-  number integer,
-  created_at default current_timestamp,
-  updated_at default current_timestamp
+CREATE TABLE IF NOT EXISTS rounds(
+  id INTEGER PRIMARY KEY,
+  game_id INTEGER,
+  word STRING,
+  number INTEGER,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
 """
 

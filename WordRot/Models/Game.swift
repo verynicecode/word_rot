@@ -11,7 +11,7 @@ class Game: ObservableObject {
     var rounds: [Round] = []
     
     init() {
-        let sql = "insert into games(status) values('started') returning id;"
+        let sql = "INSERT INTO games(status) VALUES('started') RETURNING id;"
         let id = try! RottenDB.sharedClient.scalar(sql) as! Int64
         self.id = Int(id)
     }
