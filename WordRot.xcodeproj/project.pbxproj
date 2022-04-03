@@ -152,15 +152,10 @@
 		FC036FC927C59ECD00325826 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC5FB12527D536B50042FBCC /* BoardMaker.swift */,
-				FC036FD327C5F2A500325826 /* Dictionary.swift */,
 				FC09A6FE27AF811600715D3E /* Game.swift */,
-				FC036FCA27C59F2100325826 /* GameStore.swift */,
-				FC462C8527E79500001B1B10 /* Killswitch.swift */,
 				FC11EB8327C6BB8600346270 /* LetterBoard.swift */,
 				FC11EB7F27C6BA9600346270 /* LetterRow.swift */,
 				FC11EB8127C6BAD200346270 /* LetterTile.swift */,
-				FC462C8727E7954B001B1B10 /* Loader.swift */,
 				FC6A792627F0FF51001272DA /* RottenRecord.swift */,
 				FC00B1EC27E947ED009843F3 /* Round.swift */,
 			);
@@ -232,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				FC8F74B227A4831600779157 /* Assets.xcassets */,
+				FCF18A2C27FA001600AC0E8B /* Controllers */,
 				FC462C8927E7BD53001B1B10 /* Database */,
 				FC84210B27CADE540035E151 /* Extensions */,
 				FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */,
@@ -239,6 +235,7 @@
 				FC8F74B427A4831600779157 /* Preview Content */,
 				FC036FD627C5F67200325826 /* rotten.sqlite3 */,
 				FC861A4A27DD41AE005CE3F3 /* Screens */,
+				FCF18A2B27F9FF8900AC0E8B /* Support */,
 				FC036FC827C59EB300325826 /* Views */,
 				FC8F74AE27A4831400779157 /* WordRotApp.swift */,
 			);
@@ -268,6 +265,25 @@
 				FC8F74CB27A4831600779157 /* WordRotUITestsLaunchTests.swift */,
 			);
 			path = WordRotUITests;
+			sourceTree = "<group>";
+		};
+		FCF18A2B27F9FF8900AC0E8B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FC5FB12527D536B50042FBCC /* BoardMaker.swift */,
+				FC036FD327C5F2A500325826 /* Dictionary.swift */,
+				FC462C8527E79500001B1B10 /* Killswitch.swift */,
+				FC462C8727E7954B001B1B10 /* Loader.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FCF18A2C27FA001600AC0E8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC036FCA27C59F2100325826 /* GameStore.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
