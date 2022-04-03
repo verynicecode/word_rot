@@ -4,14 +4,18 @@ struct LetterRowsView: View {
     let deleteLetter: () -> Void
     let updateWord: (String) -> Void
     
-    var letterRows: [LetterRow] {
-        return GameStore.shared.game.letterBoard.letterRows
+    var letterRows: [[Tile]] {
+        return GameStore.shared.game.letterBoard.tiles.chunked(into: 5)
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(letterRows) { letterRow in
-                LetterRowView(letterRow: letterRow, deleteLetter: deleteLetter, updateWord: updateWord)
+            ForEach(letterRows.indices, id: \.self) { index in
+                HStack(spacing: 0) {
+                    ForEach(letterRows[index]) { tile in
+                        LetterTileView(tile: tile, deleteLetter: deleteLetter, updateWord: updateWord)
+                    }
+                }
             }
         }
     }
@@ -20,10 +24,6 @@ struct LetterRowsView: View {
 struct LetterBoardView: View {
     let deleteLetter: () -> Void
     let updateWord: (String) -> Void
-    
-    var letterRows: [LetterRow] {
-        return GameStore.shared.game.letterBoard.letterRows
-    }
     
     var body: some View {
         ZStack() {

@@ -27,16 +27,15 @@ class LetterBoard {
     
     static func start(gameId: Int) -> LetterBoard {
         let tiles = Tile.findBy(gameId: gameId)
-        let letterRows = tiles.chunked(into: 5).map() { LetterRow(tiles: $0) }
-        let letterBoard = LetterBoard(letterRows: letterRows)
+        let letterBoard = LetterBoard(tiles: tiles)
         
         return letterBoard
     }
     
-    let letterRows: [LetterRow]
+    let tiles: [Tile]
     
-    init(letterRows: [LetterRow]) {
-        self.letterRows = letterRows
+    init(tiles: [Tile]) {
+        self.tiles = tiles
     }
     
     func rackLetter(letterTile: Tile) {
