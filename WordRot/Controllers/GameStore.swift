@@ -1,9 +1,9 @@
 import Foundation
 
-class GameStore: ObservableObject {
+class GameStore {
     static let shared = GameStore()
     
-    @Published var game: Game
+    let game: Game
         
     init() {
         self.game = Game.findOrCreate()
