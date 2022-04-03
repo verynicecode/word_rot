@@ -42,7 +42,7 @@ struct LetterTileView: View {
         if tile.racked {
             deleteLetter()
         } else {
-            GameStore.shared.currentGame.letterBoard.rackLetter(tile: tile)
+            GameStore.shared.game.letterBoard.rackLetter(tile: tile)
             updateWord(tile.letter)
             tile.update()
         }

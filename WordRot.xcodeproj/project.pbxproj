@@ -22,6 +22,8 @@
 		FC11EB8627C6C00B00346270 /* LetterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8527C6C00B00346270 /* LetterRowView.swift */; };
 		FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8727C6C05100346270 /* LetterTileView.swift */; };
 		FC3B587027FA0C8900DBDF65 /* 3-CreateTilesMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B586F27FA0C8900DBDF65 /* 3-CreateTilesMigration.swift */; };
+		FC3B587327FA1F3100DBDF65 /* GameRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B587227FA1F3100DBDF65 /* GameRecord.swift */; };
+		FC3B587527FA281700DBDF65 /* RoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B587427FA281700DBDF65 /* RoundRecord.swift */; };
 		FC462C8427E6849F001B1B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */; };
 		FC462C8627E79500001B1B10 /* Killswitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8527E79500001B1B10 /* Killswitch.swift */; };
 		FC462C8827E7954B001B1B10 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8727E7954B001B1B10 /* Loader.swift */; };
@@ -81,6 +83,8 @@
 		FC11EB8527C6C00B00346270 /* LetterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterRowView.swift; sourceTree = "<group>"; };
 		FC11EB8727C6C05100346270 /* LetterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTileView.swift; sourceTree = "<group>"; };
 		FC3B586F27FA0C8900DBDF65 /* 3-CreateTilesMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3-CreateTilesMigration.swift"; sourceTree = "<group>"; };
+		FC3B587227FA1F3100DBDF65 /* GameRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecord.swift; sourceTree = "<group>"; };
+		FC3B587427FA281700DBDF65 /* RoundRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRecord.swift; sourceTree = "<group>"; };
 		FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC462C8527E79500001B1B10 /* Killswitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Killswitch.swift; sourceTree = "<group>"; };
 		FC462C8727E7954B001B1B10 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -164,6 +168,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FC3B587127FA1F2600DBDF65 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B587227FA1F3100DBDF65 /* GameRecord.swift */,
+				FC3B587427FA281700DBDF65 /* RoundRecord.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
 		FC462C8927E7BD53001B1B10 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +249,7 @@
 				FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */,
 				FC036FC927C59ECD00325826 /* Models */,
 				FC8F74B427A4831600779157 /* Preview Content */,
+				FC3B587127FA1F2600DBDF65 /* Records */,
 				FC036FD627C5F67200325826 /* rotten.sqlite3 */,
 				FC861A4A27DD41AE005CE3F3 /* Screens */,
 				FCF18A2B27F9FF8900AC0E8B /* Support */,
@@ -444,6 +458,7 @@
 				FC462C9227E7CC74001B1B10 /* Migration.swift in Sources */,
 				FC09A6FD27AF4BDB00715D3E /* TitleScreen.swift in Sources */,
 				FC036FD427C5F2A500325826 /* Dictionary.swift in Sources */,
+				FC3B587527FA281700DBDF65 /* RoundRecord.swift in Sources */,
 				FC6A792527EF6BE0001272DA /* ScoresScreen.swift in Sources */,
 				FC462C8E27E7C4B7001B1B10 /* 1-CreateGamesMigration.swift in Sources */,
 				FC84210F27CADE9D0035E151 /* Font.swift in Sources */,
@@ -452,6 +467,7 @@
 				FC3B587027FA0C8900DBDF65 /* 3-CreateTilesMigration.swift in Sources */,
 				FC84210D27CADE620035E151 /* Color.swift in Sources */,
 				FC84211127CAE07D0035E151 /* RottenButton.swift in Sources */,
+				FC3B587327FA1F3100DBDF65 /* GameRecord.swift in Sources */,
 				FC11EB8027C6BA9600346270 /* LetterRow.swift in Sources */,
 				FC11EB7E27C6BA3600346270 /* LetterBoardView.swift in Sources */,
 				FCF464C527CAEF09009E467B /* RottenCircleView.swift in Sources */,

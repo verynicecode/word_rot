@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct TitleScreen: View {
-    @ObservedObject var store: GameStore
+    @ObservedObject var game: Game = GameStore.shared.game
     
     var body: some View {
-        let gameScreen = GameScreen(game: store.currentGame)
+        let startLabel = game.record.status == "started" ? "resume" : "start"
         
         NavigationView {
             VStack {
@@ -14,7 +14,7 @@ struct TitleScreen: View {
                 Text("spell words, avoid rot")
                     .font(Font.futura(30))
                 Spacer()
-                RottenLink("start", destination: gameScreen)
+                RottenLink(startLabel, destination: GameScreen())
                 Spacer().frame(height: 30)
                 RottenLink("scores", destination: ScoresScreen())
                 Spacer()
@@ -23,10 +23,10 @@ struct TitleScreen: View {
     }
 }
 
-struct TitleScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        let store = GameStore()
-        TitleScreen(store: store)
-            .preferredColorScheme(.dark)
-    }
-}
+//struct TitleScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let store = GameStore()
+//        TitleScreen(store: store)
+//            .preferredColorScheme(.dark)
+//    }
+//}
