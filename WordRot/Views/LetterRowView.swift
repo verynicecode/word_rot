@@ -7,8 +7,8 @@ struct LetterRowView: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            ForEach(letterRow.letterTiles) { letterTile in
-                LetterTileView(letterTile: letterTile, deleteLetter: deleteLetter, updateWord: updateWord)
+            ForEach(letterRow.tiles) { tile in
+                LetterTileView(tile: tile, deleteLetter: deleteLetter, updateWord: updateWord)
             }
         }
     }

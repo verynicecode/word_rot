@@ -11,15 +11,15 @@ let rotToOpacity = [
 
 struct LetterTileView: View {
     @State private var animateGradient = false
-    @ObservedObject var letterTile: LetterTile
+    @ObservedObject var tile: Tile
     
     let deleteLetter: () -> Void
     let updateWord: (String) -> Void
     
     var opacity: CGFloat {
         guard
-            !letterTile.racked,
-            let opacity = rotToOpacity[letterTile.rotLevel]
+            !tile.racked,
+            let opacity = rotToOpacity[tile.rotLevel]
         else { return 1.0 }
         
         return opacity
@@ -29,7 +29,7 @@ struct LetterTileView: View {
         let backgroundColor = Color.white.opacity(opacity)
         
         Button(action: handlePress) {
-            Text(letterTile.letter.uppercased())
+            Text(tile.letter.uppercased())
                 .font(.custom("Futura-Medium", size: 40))
                 .foregroundColor(Color.white)
                 .shadow(color: Color.black, radius: 8)
@@ -39,12 +39,12 @@ struct LetterTileView: View {
     }
     
     func handlePress() {
-        if letterTile.racked {
+        if tile.racked {
             deleteLetter()
         } else {
-            GameStore.shared.currentGame.letterBoard.rackLetter(letterTile: letterTile)
-            updateWord(letterTile.letter)
-            letterTile.update()
+            GameStore.shared.currentGame.letterBoard.rackLetter(tile: tile)
+            updateWord(tile.letter)
+            tile.update()
         }
     }
 }

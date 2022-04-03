@@ -8,10 +8,10 @@ class LetterBoard {
         
         let letterRows: [LetterRow] = data.map { letters in
             let tiles = letters.map() { letterPair in
-                return LetterTile(letter: letterPair.0, rotLevel: letterPair.1)
+                return Tile(letter: letterPair.0, rotLevel: letterPair.1)
             }
             
-            let row = LetterRow(letterTiles: tiles)
+            let row = LetterRow(tiles: tiles)
             
             return row
         }
@@ -22,14 +22,14 @@ class LetterBoard {
     }
     
     let letterRows: [LetterRow]
-    var rackedLetters: [LetterTile] = []
+    var rackedLetters: [Tile] = []
     
     init(letterRows: [LetterRow]) {
         self.letterRows = letterRows
     }
     
-    func rackLetter(letterTile: LetterTile) {
-        rackedLetters.append(letterTile)
+    func rackLetter(tile: Tile) {
+        rackedLetters.append(tile)
     }
     
     func removeLastRacked() {
