@@ -29,7 +29,7 @@ struct GameScreen: View {
                 .textInputAutocapitalization(.never)
                 .disabled(true)
                 .overlay(Rectangle().fill(Color.complete).frame(height: 10).padding(.top, 65))
-                .font(.custom("Futura-Medium", size: 60))
+                .font(.futura(60))
             
             HStack(spacing: 20) {
                 RottenButton("play", action: playWord)
