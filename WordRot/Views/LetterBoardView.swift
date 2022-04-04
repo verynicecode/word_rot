@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LetterRowsView: View {
+struct LetterBoardView: View {
     let deleteLetter: () -> Void
     let updateWord: (String) -> Void
     
@@ -9,27 +9,18 @@ struct LetterRowsView: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(letterRows.indices, id: \.self) { index in
-                HStack(spacing: 0) {
-                    ForEach(letterRows[index]) { tile in
-                        LetterTileView(tile: tile, deleteLetter: deleteLetter, updateWord: updateWord)
+        ZStack() {
+            CirclesView()
+            VStack(spacing: 0) {
+                ForEach(letterRows.indices, id: \.self) { index in
+                    HStack(spacing: 0) {
+                        ForEach(letterRows[index]) { tile in
+                            LetterTileView(tile: tile, deleteLetter: deleteLetter, updateWord: updateWord)
+                        }
                     }
                 }
             }
-        }
-    }
-}
-
-struct LetterBoardView: View {
-    let deleteLetter: () -> Void
-    let updateWord: (String) -> Void
-    
-    var body: some View {
-        ZStack() {
-            CirclesView()
-            LetterRowsView(deleteLetter: deleteLetter, updateWord: updateWord)
-                .background(.ultraThinMaterial)
+            .background(.ultraThinMaterial)
         }
         .clipped()
     }
