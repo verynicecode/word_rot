@@ -2,9 +2,7 @@ import SwiftUI
 
 struct GameScreen: View {
     @Environment(\.dismiss) private var dismiss
-    
-    @State private var word: String = ""
-    
+        
     @ObservedObject var game: Game = GameStore.shared.game
     
     var body: some View {
@@ -24,7 +22,7 @@ struct GameScreen: View {
                     .frame(width: 100, alignment: .trailing)
             }
             
-            TextField("", text: $word)
+            TextField("", text: $game.word)
                 .disableAutocorrection(true)
                 .textInputAutocapitalization(.never)
                 .disabled(true)
@@ -32,11 +30,11 @@ struct GameScreen: View {
                 .font(.futura(60))
             
             HStack(spacing: 20) {
-                RottenButton("play", action: playWord)
+                RottenButton("play", action: handlePlayTap)
                 
                 Spacer()
                 
-                RottenButton("delete", action: deleteLetter)
+                RottenButton("delete", action: handleDeleteTap)
             }
             
             if let message = game.lastError {
@@ -49,7 +47,7 @@ struct GameScreen: View {
             GeometryReader { proxy in
                 VStack() {
                     Spacer()
-                    LetterBoardView(deleteLetter: deleteLetter, updateWord: updateWord)
+                    LetterBoardView()
                         .frame(width: proxy.size.width, height: proxy.size.width)
                 }
             }
@@ -58,26 +56,11 @@ struct GameScreen: View {
         .navigationBarHidden(true)
     }
     
-    func updateWord(letter: String) {
-        word += letter.uppercased()
+    func handlePlayTap() {
+        GameStore.shared.playWord()
     }
     
-    func playWord() {
-        guard word != "" else { return }
-        
-        game.playWord(word.lowercased())
-        
-        if game.lastError == nil {
-            word = ""
-        }
-    }
-    
-    func deleteLetter() {
-        guard word != "" else { return }
-        
-        // this should really be hitting the controller not the models directly
-//        game.letterBoard.removeLastRacked()
-        word.removeLast()
+    func handleDeleteTap() {
     }
     
     func quitGame() {

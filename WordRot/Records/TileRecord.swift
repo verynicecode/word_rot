@@ -46,10 +46,10 @@ struct TileRecord {
         try! RottenDB.sharedClient.run(createSql, createBindings)
     }
     
-    static func update(id: Int, rackPosition: Int) {
+    static func update(id: Int, rackPosition: Int?) {
         // this needs to set the updated at timestamp too!!
         let sql = "UPDATE tiles SET rack_position = ? WHERE id = ?;"
-        let bindings: [Binding] = [rackPosition, id]
+        let bindings: [Binding?] = [rackPosition, id]
         try! RottenDB.sharedClient.run(sql, bindings)
     }
     

@@ -12,10 +12,7 @@ let rotToOpacity = [
 struct LetterTileView: View {
     @State private var animateGradient = false
     @ObservedObject var tile: Tile
-    
-    let deleteLetter: () -> Void
-    let updateWord: (String) -> Void
-    
+        
     var opacity: CGFloat {
         guard
             !tile.racked,
