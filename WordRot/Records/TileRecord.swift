@@ -10,6 +10,16 @@ struct TileRecord {
 
         return tiles
     }
+    
+    static func findBy(gameId: Int, row: Int, column: Int) -> TileRecord? {
+        let selectSql = "SELECT * FROM tiles WHERE game_id = ? AND row = ? AND column = ?;"
+        let selectBindings = [gameId, row, column]
+        let rows = RottenDB.shared.selectRows(selectSql, selectBindings)
+        guard let bindings = rows.first else { return nil }
+        
+        let newRecord = TileRecord(bindings: bindings)
+        return newRecord
+    }
 
     static func create(gameId: Int, row: Int, column: Int, letter: String, decomp: Int) {
         let createSql = "INSERT INTO tiles(game_id, row, column, letter, decomp) VALUES(?, ?, ?, ?, ?);"
