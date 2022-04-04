@@ -3,7 +3,7 @@ import Foundation
 class Tile: ObservableObject, Identifiable {
     @Published var letter: String
     @Published var rotLevel: Int
-    @Published var racked = false
+    @Published var racked: Bool
     
     var record: TileRecord
     
@@ -41,10 +41,21 @@ class Tile: ObservableObject, Identifiable {
         self.record = record
         self.letter = record.letter
         self.rotLevel = record.decomp
+        self.racked = record.rackPosition != nil
     }
     
-    func update() {
-        racked.toggle()
+    func rack() {
+        let nextRackPosition = TileRecord.nextRackPositionFor(record.gameId)
+        TileRecord.update(id: record.id, rackPosition: nextRackPosition)
+        reload()
+    }
+    
+    func reload() {
+        guard let reloadedRecord = TileRecord.findBy(id: record.id) else { return }
+        self.record = reloadedRecord
+        self.letter = reloadedRecord.letter
+        self.rotLevel = reloadedRecord.decomp
+        self.racked = reloadedRecord.rackPosition != nil
     }
     
     func update(gameId: Int) {
@@ -53,5 +64,6 @@ class Tile: ObservableObject, Identifiable {
         self.record = newRecord
         self.letter = newRecord.letter
         self.rotLevel = newRecord.decomp
+        self.racked = newRecord.rackPosition != nil
     }
 }

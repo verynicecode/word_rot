@@ -40,12 +40,9 @@ struct LetterTileView: View {
     
     func handlePress() {
         if tile.racked {
-            deleteLetter()
+            GameStore.shared.unrack(tile: tile)
         } else {
-            // this should really be hitting the controller
-//            GameStore.shared.game.letterBoard.rackLetter(tile: tile)
-            updateWord(tile.letter)
-            tile.update()
+            GameStore.shared.rack(tile: tile)
         }
     }
 }
