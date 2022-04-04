@@ -28,6 +28,12 @@ class GameStore {
         game.reload(id: game.record.id)
     }
     
+    func deleteLastRacked() {
+        let lastTile = game.tiles.filter { $0.racked }.sorted { $0.record.rackPosition! < $1.record.rackPosition! }.last
+        lastTile?.unrack()
+        game.reload(id: game.record.id)
+    }
+    
     func playWord() {
         game.playWord()
     }
