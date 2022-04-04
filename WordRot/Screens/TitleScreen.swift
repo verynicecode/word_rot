@@ -30,10 +30,9 @@ struct TitleScreen: View {
     }
 }
 
-//struct TitleScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let store = GameStore()
-//        TitleScreen(store: store)
-//            .preferredColorScheme(.dark)
-//    }
-//}
+struct TitleScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        TitleScreen()
+            .preferredColorScheme(.dark)
+    }
+}

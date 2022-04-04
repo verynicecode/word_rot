@@ -28,4 +28,11 @@ struct RoundRecord {
         self.word = bindings[2] as! String
         self.number = Int(bindings[3] as! Int64)
     }
+    
+    init(id: Int, gameId: Int, word: String, number: Int) {
+        self.id = id
+        self.gameId = gameId
+        self.word = word
+        self.number = number
+    }
 }

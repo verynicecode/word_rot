@@ -70,10 +70,9 @@ struct GameScreen: View {
     }
 }
 
-//struct GameScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let game = Game()
-//        GameScreen(game: game)
-//            .preferredColorScheme(.dark)
-//    }
-//}
+struct GameScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        GameScreen()
+            .preferredColorScheme(.dark)
+    }
+}
