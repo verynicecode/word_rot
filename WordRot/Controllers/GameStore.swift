@@ -20,9 +20,15 @@ class GameStore {
     
     func rack(tile: Tile) {
         tile.rack()
+        game.reload(id: game.record.id)
     }
     
     func unrack(tile: Tile) {
-        // insert working code here
+        tile.unrack()
+        game.reload(id: game.record.id)
+    }
+    
+    func playWord() {
+        game.playWord()
     }
 }

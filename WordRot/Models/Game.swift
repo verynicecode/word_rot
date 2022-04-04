@@ -3,6 +3,7 @@ import Foundation
 class Game: ObservableObject {
     @Published var lastError: String?
     @Published var score: Int
+    @Published var word: String
     
     let tiles: [Tile]
     var rounds: [Round]
@@ -32,14 +33,20 @@ class Game: ObservableObject {
         self.rounds = rounds
         self.score = rounds.map { $0.record.word.count }.reduce(0, +)
         self.tiles = tiles
+        self.word = tiles.filter { $0.racked }.sorted { $0.record.rackPosition! < $1.record.rackPosition! }.map { $0.letter }.joined().uppercased()
     }
     
-    func playWord(_ word: String) {
-        guard !playedWords.contains(word) else { lastError = "word already played"; return }
-        guard word.count > 3 else { lastError = "word too short"; return }
-        guard Dictionary.isValid(word) else { lastError = "word not found"; return }
+    func playWord() {
+        let playedWord = word.lowercased()
         
-        Round.create(game: self, word: word)
+        guard playedWord != "" else { return }
+        guard !playedWords.contains(playedWord) else { lastError = "word already played"; return }
+        guard playedWord.count > 3 else { lastError = "word too short"; return }
+        guard Dictionary.isValid(playedWord) else { lastError = "word not found"; return }
+        
+        Round.create(game: self, word: playedWord)
+        Tile.clearRackPositions(gameId: record.id)
+        tiles.forEach { $0.reload() }
         reload(id: record.id)
         
         lastError = nil
@@ -69,5 +76,6 @@ class Game: ObservableObject {
         let rounds = Round.findBy(gameId: id)
         self.rounds = rounds
         self.score = rounds.map { $0.record.word.count }.reduce(0, +)
+        self.word = tiles.filter { $0.racked }.sorted { $0.record.rackPosition! < $1.record.rackPosition! }.map { $0.letter }.joined().uppercased()
     }
 }

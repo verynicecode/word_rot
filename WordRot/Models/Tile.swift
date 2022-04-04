@@ -7,6 +7,12 @@ class Tile: ObservableObject, Identifiable {
     
     var record: TileRecord
     
+    static func clearRackPositions(gameId: Int) {
+        let sql = "UPDATE tiles SET rack_position = NULL WHERE game_id = ?;"
+        let bindings = [gameId]
+        try! RottenDB.sharedClient.run(sql, bindings)
+    }
+    
     static func findBy(gameId: Int) -> [Tile] {
         let records = TileRecord.findBy(gameId: gameId)
         let tiles = records.map { Tile(record: $0) }
@@ -47,6 +53,11 @@ class Tile: ObservableObject, Identifiable {
     func rack() {
         let nextRackPosition = TileRecord.nextRackPositionFor(record.gameId)
         TileRecord.update(id: record.id, rackPosition: nextRackPosition)
+        reload()
+    }
+    
+    func unrack() {
+        TileRecord.update(id: record.id, rackPosition: nil)
         reload()
     }
     
