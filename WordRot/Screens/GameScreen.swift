@@ -61,6 +61,7 @@ struct GameScreen: View {
     }
     
     func handleDeleteTap() {
+        GameStore.shared.deleteLastRacked()
     }
     
     func quitGame() {
