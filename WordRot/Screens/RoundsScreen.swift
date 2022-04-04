@@ -30,10 +30,15 @@ struct RoundsScreen: View {
     }
 }
 
-//struct RoundsScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let game = Game()
-//        game.playedWords = ["Foo", "Bar"]
-//        return RoundsScreen(game: game).preferredColorScheme(.dark)
-//    }
-//}
+struct RoundsScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        let record = GameRecord(id: 0, status: "created")
+        let rounds = [
+            Round(record: RoundRecord(id: 0, gameId: 0, word: "Foo", number: 1)),
+            Round(record: RoundRecord(id: 0, gameId: 0, word: "Bar", number: 2))
+        ]
+        let game = Game(record: record, rounds: rounds, tiles: [])
+        
+        RoundsScreen(game: game).preferredColorScheme(.dark)
+    }
+}

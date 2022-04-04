@@ -12,7 +12,7 @@ let rotToOpacity = [
 struct LetterTileView: View {
     @State private var animateGradient = false
     @ObservedObject var tile: Tile
-        
+    
     var opacity: CGFloat {
         guard
             !tile.racked,
@@ -44,8 +44,24 @@ struct LetterTileView: View {
     }
 }
 
-//struct LetterTileView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LetterTileView()
-//    }
-//}
+struct LetterTileView_Previews: PreviewProvider {
+    static var previews: some View {
+        let decomps = (0...5)
+        
+        VStack(spacing: 0) {
+            ForEach(decomps, id: \.self) { decomp in
+                LetterTileView(tile: Tile(record: TileRecord(
+                    id: 1,
+                    gameId: 1,
+                    row: 1,
+                    column: 1,
+                    letter: "a",
+                    decomp: decomp,
+                    rackPosition: nil
+                )))
+            }
+        }
+        .preferredColorScheme(.dark)
+        .previewLayout(.fixed(width: 60, height: CGFloat((decomps.count * 60))  ))
+    }
+}

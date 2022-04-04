@@ -39,4 +39,9 @@ struct GameRecord {
         self.id = Int(bindings[0] as! Int64)
         self.status = bindings[1] as! String
     }
+    
+    init(id: Int, status: String) {
+        self.id = id
+        self.status = status
+    }
 }

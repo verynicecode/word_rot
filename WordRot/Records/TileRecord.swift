@@ -71,4 +71,14 @@ struct TileRecord {
         self.decomp = Int(bindings[5] as! Int64)
         self.rackPosition = bindings[6] as? Int64
     }
+    
+    init(id: Int, gameId: Int, row: Int, column: Int, letter: String, decomp: Int, rackPosition: Int64?) {
+        self.id = id
+        self.gameId = gameId
+        self.row = row
+        self.column = column
+        self.letter = letter
+        self.decomp = decomp
+        self.rackPosition = rackPosition
+    }
 }
