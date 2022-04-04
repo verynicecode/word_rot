@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct TitleScreen: View {
+    @State private var showGameView = false
     @ObservedObject var game: Game = GameStore.shared.game
     
     var body: some View {
@@ -14,12 +15,18 @@ struct TitleScreen: View {
                 Text("spell words, avoid rot")
                     .font(Font.futura(30))
                 Spacer()
-                RottenLink(startLabel, destination: GameScreen())
+                RottenButton(startLabel, action: handleStartTap)
+                NavigationLink(destination: GameScreen(), isActive: $showGameView) { EmptyView() }
                 Spacer().frame(height: 30)
                 RottenLink("scores", destination: ScoresScreen())
                 Spacer()
             }
         }
+    }
+    
+    func handleStartTap() {
+        GameStore.shared.start()
+        showGameView = true
     }
 }
 

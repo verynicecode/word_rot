@@ -34,11 +34,6 @@ class Game: ObservableObject {
     }
     
     func playWord(_ word: String) {
-        // this is a hack
-        if playedWords.count == 0 {
-            start()
-        }
-        
         guard !playedWords.contains(word) else { lastError = "word already played"; return }
         guard word.count > 3 else { lastError = "word too short"; return }
         guard Dictionary.isValid(word) else { lastError = "word not found"; return }
