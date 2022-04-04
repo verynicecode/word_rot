@@ -5,7 +5,7 @@ struct LetterBoardView: View {
     let updateWord: (String) -> Void
     
     var letterRows: [[Tile]] {
-        return GameStore.shared.game.letterBoard.tiles.chunked(into: 5)
+        return GameStore.shared.game.tiles.chunked(into: 5)
     }
     
     var body: some View {

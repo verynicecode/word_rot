@@ -17,7 +17,6 @@
 		FC11EB7C27C69AAE00346270 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FC11EB7B27C69AAE00346270 /* SQLite */; };
 		FC11EB7E27C6BA3600346270 /* LetterBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB7D27C6BA3600346270 /* LetterBoardView.swift */; };
 		FC11EB8227C6BAD200346270 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8127C6BAD200346270 /* Tile.swift */; };
-		FC11EB8427C6BB8600346270 /* LetterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8327C6BB8600346270 /* LetterBoard.swift */; };
 		FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11EB8727C6C05100346270 /* LetterTileView.swift */; };
 		FC3B587027FA0C8900DBDF65 /* 3-CreateTilesMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B586F27FA0C8900DBDF65 /* 3-CreateTilesMigration.swift */; };
 		FC3B587327FA1F3100DBDF65 /* GameRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B587227FA1F3100DBDF65 /* GameRecord.swift */; };
@@ -78,7 +77,6 @@
 		FC09A6FE27AF811600715D3E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FC11EB7D27C6BA3600346270 /* LetterBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoardView.swift; sourceTree = "<group>"; };
 		FC11EB8127C6BAD200346270 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
-		FC11EB8327C6BB8600346270 /* LetterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoard.swift; sourceTree = "<group>"; };
 		FC11EB8727C6C05100346270 /* LetterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTileView.swift; sourceTree = "<group>"; };
 		FC3B586F27FA0C8900DBDF65 /* 3-CreateTilesMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3-CreateTilesMigration.swift"; sourceTree = "<group>"; };
 		FC3B587227FA1F3100DBDF65 /* GameRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecord.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				FC09A6FE27AF811600715D3E /* Game.swift */,
-				FC11EB8327C6BB8600346270 /* LetterBoard.swift */,
 				FC6A792627F0FF51001272DA /* RottenRecord.swift */,
 				FC00B1EC27E947ED009843F3 /* Round.swift */,
 				FC11EB8127C6BAD200346270 /* Tile.swift */,
@@ -442,7 +439,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC11EB8827C6C05100346270 /* LetterTileView.swift in Sources */,
-				FC11EB8427C6BB8600346270 /* LetterBoard.swift in Sources */,
 				FC00B1ED27E947ED009843F3 /* Round.swift in Sources */,
 				FCF464C327CAEEA5009E467B /* CirclesView.swift in Sources */,
 				FC8F74B127A4831400779157 /* GameScreen.swift in Sources */,

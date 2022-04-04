@@ -1,5 +1,7 @@
 import Foundation
 
+typealias LetterPair = (String, Int)
+
 class BoardMaker {
     static func fill() -> [[LetterPair]] {
         let rows = 5

@@ -4,8 +4,7 @@ class Game: ObservableObject {
     @Published var lastError: String?
     @Published var score: Int
     
-    let letterBoard: LetterBoard
-    
+    let tiles: [Tile]
     var rounds: [Round]
     var record: GameRecord
     
@@ -16,21 +15,23 @@ class Game: ObservableObject {
     static func findOrCreate() -> Game {
         if let existingRecord = GameRecord.findBy(status: "created") ?? GameRecord.findBy(status: "started") {
             let rounds = Round.findBy(gameId: existingRecord.id)
-            return Game(record: existingRecord, rounds: rounds)
+            let tiles = Tile.findOrCreate(gameId: existingRecord.id)
+            return Game(record: existingRecord, rounds: rounds, tiles: tiles)
         }
         
         let id = GameRecord.create()
         let record = GameRecord.findBy(id: id)!
         let rounds = Round.findBy(gameId: id)
+        let tiles = Tile.findOrCreate(gameId: record.id)
         
-        return Game(record: record, rounds: rounds)
+        return Game(record: record, rounds: rounds, tiles: tiles)
     }
     
-    init(record: GameRecord, rounds: [Round]) {
+    init(record: GameRecord, rounds: [Round], tiles: [Tile]) {
         self.record = record
         self.rounds = rounds
         self.score = rounds.map { $0.record.word.count }.reduce(0, +)
-        self.letterBoard = LetterBoard.findOrCreate(gameId: record.id)
+        self.tiles = tiles
     }
     
     func playWord(_ word: String) {
@@ -46,6 +47,8 @@ class Game: ObservableObject {
     
     func create() {
         let id = GameRecord.create()
+        Tile.generateTiles(gameId: id)
+        tiles.forEach { $0.update(gameId: id) }
         reload(id: id)
     }
     
