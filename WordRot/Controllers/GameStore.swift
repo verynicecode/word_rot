@@ -9,7 +9,6 @@ class GameStore {
         self.game = Game.findOrCreate()
     }
     
-    // this isn't being called because the button is actually a link that navigates
     func start() {
         game.start()
     }
@@ -17,5 +16,13 @@ class GameStore {
     func finish() {
         game.finish()
         game.create()
+    }
+    
+    func rack(tile: Tile) {
+        tile.rack()
+    }
+    
+    func unrack(tile: Tile) {
+        // insert working code here
     }
 }
