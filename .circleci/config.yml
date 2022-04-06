@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  test:
+    macos:
+      xcode: 13.2.1
+    steps:
+      - checkout
+      - run:
+          name: Run Tests
+          command: ./bin/test
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - test
