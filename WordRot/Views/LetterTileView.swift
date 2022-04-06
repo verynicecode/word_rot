@@ -5,8 +5,7 @@ let rotToOpacity = [
     1: 0.7,
     2: 0.6,
     3: 0.4,
-    4: 0.2,
-    5: 0.1
+    4: 0.2
 ]
 
 struct LetterTileView: View {
@@ -23,10 +22,11 @@ struct LetterTileView: View {
     }
     
     var body: some View {
-        let backgroundColor = Color.white.opacity(opacity)
+        let backgroundColor = tile.rotLevel == 5 ? Color.black : Color.white.opacity(opacity)
+        let letterLabel = tile.rotLevel == 5 ? "" : tile.letter.uppercased()
         
         Button(action: handlePress) {
-            Text(tile.letter.uppercased())
+            Text(letterLabel)
                 .font(.futura(40))
                 .foregroundColor(Color.white)
                 .shadow(color: Color.black, radius: 8)

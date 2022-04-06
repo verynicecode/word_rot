@@ -102,12 +102,14 @@ class Tile: ObservableObject, Identifiable {
     }
     
     func rack() {
+        if record.decomp == 5 { return }
         let nextRackPosition = TileRecord.nextRackPositionFor(record.gameId)
         TileRecord.update(id: record.id, rackPosition: nextRackPosition)
         reload()
     }
     
     func unrack() {
+        if record.decomp == 5 { return }
         TileRecord.update(id: record.id, rackPosition: nil)
         reload()
     }
