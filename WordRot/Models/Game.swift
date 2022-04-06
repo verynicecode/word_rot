@@ -45,7 +45,7 @@ class Game: ObservableObject {
         guard Dictionary.isValid(playedWord) else { lastError = "word not found"; return }
         
         Round.create(game: self, word: playedWord)
-        Tile.clearRackPositions(gameId: record.id)
+        Tile.updateAll(gameId: record.id)
         tiles.forEach { $0.reload() }
         reload(id: record.id)
         
