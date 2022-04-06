@@ -17,7 +17,7 @@ struct Loader {
             let killswitchUrl = URL(string: endpoint),
             let data = try? Data(contentsOf: killswitchUrl),
             let killswitch = try? decoder.decode(Killswitch.self, from: data)
-        else { passCallback(); return }
+        else { return passCallback() }
         
         let buildVersion = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
         let buildNumber = Int(buildVersion)!
