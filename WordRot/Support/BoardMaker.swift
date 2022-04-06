@@ -54,7 +54,7 @@ class BoardMaker {
         
         for _ in 1...vowelCount {
             let letter = vowels.remove(at: Int.random(in: 0..<vowels.count))
-            letters.append((letter, 2))
+            letters.append((letter, 1))
         }
     }
     
@@ -63,8 +63,8 @@ class BoardMaker {
         
         for _ in 1...dupeCount {
             let letter = consonants.remove(at: Int.random(in: 0..<consonants.count))
-            letters.append((letter, 2))
-            letters.append((letter, 2))
+            letters.append((letter, 1))
+            letters.append((letter, 1))
         }
     }
     
@@ -73,7 +73,7 @@ class BoardMaker {
         
         for _ in 1...remainingCount {
             let letter = consonants.remove(at: Int.random(in: 0..<consonants.count))
-            letters.append((letter, 2))
+            letters.append((letter, 1))
         }
     }
     
