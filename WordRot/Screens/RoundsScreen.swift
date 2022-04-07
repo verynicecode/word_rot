@@ -14,11 +14,18 @@ struct RoundsScreen: View {
                 RottenButton("done", action: handleDonePress)
             }
             
-            ForEach(game.playedWords, id: \.self) { word in
-                Text(word)
-                    .font(Font.futura(20))
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    HStack() {
+                        Spacer()
+                    }
+                    
+                    ForEach(game.playedWords, id: \.self) { word in
+                        Text(word)
+                            .font(Font.futura(20))
+                    }
+                }
             }
-            
             Spacer()
         }
         .padding(20)

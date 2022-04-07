@@ -9,7 +9,6 @@ let rotToOpacity = [
 ]
 
 struct LetterTileView: View {
-    @State private var animateGradient = false
     @ObservedObject var tile: Tile
     
     var opacity: CGFloat {

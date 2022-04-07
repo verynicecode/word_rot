@@ -29,9 +29,17 @@ struct ScoresScreen: View {
             Text(summaryLine)
                 .font(Font.futura(30))
             
-            ForEach(scores, id: \.self) { score in
-                Text(score)
-                    .font(Font.futura(30))
+            ScrollView {
+                VStack() {
+                    HStack() {
+                        Spacer()
+                    }
+                    
+                    ForEach(scores, id: \.self) { score in
+                        Text(score)
+                            .font(Font.futura(30))
+                    }
+                }
             }
             
             Spacer()
