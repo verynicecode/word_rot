@@ -58,6 +58,25 @@ class Tile: ObservableObject, Identifiable {
         let advanceBindings: [Binding] = [gameId]
         try! RottenDB.sharedClient.run(advanceSql, advanceBindings)
         
+        // generate new letters for unplayed tiles
+        let unplayedTileSql = "SELECT id, letter FROM tiles WHERE rack_position IS NULL AND game_id = ? AND id NOT IN (\(notList));"
+        let unplayedTileBindings: [Binding] = [gameId]
+        let unplayedTileRows = RottenDB.shared.selectRows(unplayedTileSql, unplayedTileBindings)
+        let unplayedTileIdsAndLetters = unplayedTileRows.map { row in
+            return (
+                Int(row[0] as! Int64),
+                row[1] as! String
+            )
+        }
+        
+        unplayedTileIdsAndLetters.forEach { (id, letter) in
+            LetterPile.shared.returnLetter(letter: letter)
+            let newLetter = LetterPile.shared.drawLetter()
+            let newLetterSql = "UPDATE tiles SET letter = ? WHERE id = ?;"
+            let newLetterBindings: [Binding] = [newLetter, id]
+            try! RottenDB.sharedClient.run(newLetterSql, newLetterBindings)
+        }
+        
         // clear rack positions
         let clearSql = "UPDATE tiles SET rack_position = NULL WHERE game_id = ?;"
         let clearBindings = [gameId]
@@ -72,11 +91,16 @@ class Tile: ObservableObject, Identifiable {
     }
     
     static func findOrCreate(gameId: Int) -> [Tile] {
-        let countSql = "SELECT COUNT(*) FROM tiles WHERE game_id = \(gameId);"
-        let tileCount = try! RottenDB.sharedClient.scalar(countSql) as! Int64
+        let letterSql = "SELECT letter FROM tiles WHERE game_id = \(gameId);"
+        let letterRows = RottenDB.shared.selectRows(letterSql)
+        let letters = letterRows.map { row in
+            row[0] as! String
+        }
         
-        if tileCount == 0 {
+        if letters.count == 0 {
             generateTiles(gameId: gameId)
+        } else {
+            LetterPile.shared.drawLetters(letters)
         }
         
         let tiles = Tile.findBy(gameId: gameId)

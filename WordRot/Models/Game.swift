@@ -66,6 +66,10 @@ class Game: ObservableObject {
     
     func finish() {
         GameRecord.update(id: record.id, status: "finished")
+        tiles.forEach { tile in
+            let letter = tile.letter
+            LetterPile.shared.returnLetter(letter: letter)
+        }
         reload(id: record.id)
     }
     

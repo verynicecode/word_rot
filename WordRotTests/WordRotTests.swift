@@ -1,36 +1,34 @@
-//
-//  WordRotTests.swift
-//  WordRotTests
-//
-//  Created by Jonathan Allured on 1/28/22.
-//
-
 import XCTest
 @testable import WordRot
 
 class WordRotTests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        let seed = "7".data(using: .utf8)!
+        let boardMaker = FancyBoardMaker(seed: seed)
+        boardMaker.fill()
+        XCTAssertEqual(boardMaker.letters, ["e", "e", "i", "o", "a", "v", "v", "z", "z", "r", "n", "m", "k", "j", "b", "s", "q", "w", "t", "p", "g", "x", "d", "h", "y"])
     }
-
+    
+    func testPile() {
+        let seed = "7".data(using: .utf8)!
+        let pile = LetterPile(seed: seed)
+        XCTAssertEqual(pile.letters.count, 100)
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }
