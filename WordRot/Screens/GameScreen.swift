@@ -22,12 +22,21 @@ struct GameScreen: View {
                     .frame(width: 100, alignment: .trailing)
             }
             
-            TextField("", text: $game.word)
-                .disableAutocorrection(true)
-                .textInputAutocapitalization(.never)
-                .disabled(true)
-                .overlay(Rectangle().fill(Color.complete).frame(height: 10).padding(.top, 65))
-                .font(.futura(60))
+            VStack(spacing: 0) {
+                Spacer(minLength: 0)
+                TextField("", text: $game.word)
+                    .disableAutocorrection(true)
+                    .textInputAutocapitalization(.never)
+                    .disabled(true)
+                    .font(.futura(60))
+                    .minimumScaleFactor(0.5)
+                
+                Rectangle()
+                    .fill(Color.complete)
+                    .frame(height: 10)
+                    .padding(.top, -10)
+            }
+            .frame(height: 80)
             
             HStack(spacing: 20) {
                 RottenButton("play", action: handlePlayTap)
