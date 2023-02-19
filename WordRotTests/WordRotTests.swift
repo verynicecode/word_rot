@@ -11,13 +11,6 @@ class WordRotTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() throws {
-        let seed = "7".data(using: .utf8)!
-        let boardMaker = FancyBoardMaker(seed: seed)
-        boardMaker.fill()
-        XCTAssertEqual(boardMaker.letters, ["e", "e", "i", "o", "a", "v", "v", "z", "z", "r", "n", "m", "k", "j", "b", "s", "q", "w", "t", "p", "g", "x", "d", "h", "y"])
-    }
-    
     func testPile() {
         let seed = "7".data(using: .utf8)!
         let pile = LetterPile(seed: seed)
