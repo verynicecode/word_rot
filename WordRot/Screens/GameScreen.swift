@@ -5,6 +5,8 @@ struct GameScreen: View {
         
     @ObservedObject var game: Game = GameStore.shared.game
     
+    @State var showMessage = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack() {
@@ -39,7 +41,15 @@ struct GameScreen: View {
             .frame(height: 80)
             
             HStack(spacing: 20) {
-                RottenButton("play", action: handlePlayTap)
+                RottenButton("play") {
+                    handlePlayTap()
+                    withAnimation(.easeIn(duration: 0.25)) {
+                        showMessage = true
+                        withAnimation(.easeIn(duration: 0.25).delay(1.5)) {
+                            showMessage = false
+                        }
+                    }
+                }
                 
                 Spacer()
                 
@@ -49,6 +59,7 @@ struct GameScreen: View {
             if let message = game.lastError {
                 Text(message)
                     .font(Font.futura(30))
+                    .opacity(showMessage ? 1 : 0)
             }
             
             Spacer()
