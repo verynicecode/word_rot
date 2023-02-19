@@ -23,7 +23,9 @@ struct RootScreen: View {
     }
     
     func beginLoading() {
-        Loader.check(pass: finishLoading, fail: promptToUpdate)
+        DispatchQueue.global(qos: .userInitiated).async {
+            Loader.check(pass: finishLoading, fail: promptToUpdate)
+        }
     }
     
     func finishLoading() {

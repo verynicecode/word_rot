@@ -48,7 +48,7 @@
 		FC8F74CC27A4831600779157 /* WordRotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F74CB27A4831600779157 /* WordRotUITestsLaunchTests.swift */; };
 		FCF464C327CAEEA5009E467B /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF464C227CAEEA5009E467B /* CirclesView.swift */; };
 		FCF464C527CAEF09009E467B /* RottenCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF464C427CAEF09009E467B /* RottenCircleView.swift */; };
-		FCF4ED3A299FEB82009B8CDE /* FancyBoardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4ED39299FEB82009B8CDE /* FancyBoardMaker.swift */; };
+		FCF4ED3A299FEB82009B8CDE /* LetterPile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4ED39299FEB82009B8CDE /* LetterPile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +112,7 @@
 		FC8F74CB27A4831600779157 /* WordRotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCF464C227CAEEA5009E467B /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
 		FCF464C427CAEF09009E467B /* RottenCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenCircleView.swift; sourceTree = "<group>"; };
-		FCF4ED39299FEB82009B8CDE /* FancyBoardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyBoardMaker.swift; sourceTree = "<group>"; };
+		FCF4ED39299FEB82009B8CDE /* LetterPile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +254,6 @@
 				FCF18A2B27F9FF8900AC0E8B /* Support */,
 				FC036FC827C59EB300325826 /* Views */,
 				FC8F74AE27A4831400779157 /* WordRotApp.swift */,
-				FCF4ED39299FEB82009B8CDE /* FancyBoardMaker.swift */,
 			);
 			path = WordRot;
 			sourceTree = "<group>";
@@ -290,6 +289,7 @@
 				FC5FB12527D536B50042FBCC /* BoardMaker.swift */,
 				FC036FD327C5F2A500325826 /* Dictionary.swift */,
 				FC462C8527E79500001B1B10 /* Killswitch.swift */,
+				FCF4ED39299FEB82009B8CDE /* LetterPile.swift */,
 				FC462C8727E7954B001B1B10 /* Loader.swift */,
 			);
 			path = Support;
@@ -452,7 +452,7 @@
 				FC6A792727F0FF51001272DA /* RottenRecord.swift in Sources */,
 				FC5FB12627D536B50042FBCC /* BoardMaker.swift in Sources */,
 				FC84211327CAE2550035E151 /* RottenLink.swift in Sources */,
-				FCF4ED3A299FEB82009B8CDE /* FancyBoardMaker.swift in Sources */,
+				FCF4ED3A299FEB82009B8CDE /* LetterPile.swift in Sources */,
 				FC861A4C27DD42AB005CE3F3 /* SplashScreen.swift in Sources */,
 				FC462C8627E79500001B1B10 /* Killswitch.swift in Sources */,
 				FC462C9227E7CC74001B1B10 /* Migration.swift in Sources */,

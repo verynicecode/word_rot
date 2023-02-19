@@ -41,8 +41,6 @@ class LetterPile {
     func drawLetter() -> String {
         let index = arc4.nextInt(upperBound: letters.count)
         let drawnLetter = letters.remove(at: index)
-        print("drawLetter \(drawnLetter)")
-        print("letters.count: \(letters.count)")
         return drawnLetter
     }
     
@@ -51,27 +49,9 @@ class LetterPile {
             let index = letters.firstIndex(of: letter)!
             letters.remove(at: index)
         }
-        
-        print("drawLetters")
-        print("letters.count: \(letters.count)")
     }
     
     func returnLetter(letter: String) {
-        print("returnLetter \(letter)")
-        
         letters.append(letter)
-        print("letters.count: \(letters.count)")
-    }
-}
-
-class FancyBoardMaker {
-    private let letterPile: LetterPile
-    
-    init(seed: Data) {
-        self.letterPile = LetterPile(seed: seed)
-    }
-    
-    func fill(word: [String]) -> [String] {
-        return []
     }
 }
