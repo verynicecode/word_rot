@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xcodebuild test -scheme WordRot -destination 'name=iPhone 13'
+xcodebuild test -scheme WordRot -destination 'name=iPhone 14'
