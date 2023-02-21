@@ -23,6 +23,7 @@
 		FC3B587527FA281700DBDF65 /* RoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B587427FA281700DBDF65 /* RoundRecord.swift */; };
 		FC3B587727FA359100DBDF65 /* TileRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B587627FA359100DBDF65 /* TileRecord.swift */; };
 		FC3B587927FA399D00DBDF65 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B587827FA399D00DBDF65 /* Array.swift */; };
+		FC410CDA29A1E03400325F28 /* RulesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC410CD929A1E03400325F28 /* RulesScreen.swift */; };
 		FC462C8427E6849F001B1B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */; };
 		FC462C8627E79500001B1B10 /* Killswitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8527E79500001B1B10 /* Killswitch.swift */; };
 		FC462C8827E7954B001B1B10 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462C8727E7954B001B1B10 /* Loader.swift */; };
@@ -84,6 +85,7 @@
 		FC3B587427FA281700DBDF65 /* RoundRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRecord.swift; sourceTree = "<group>"; };
 		FC3B587627FA359100DBDF65 /* TileRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileRecord.swift; sourceTree = "<group>"; };
 		FC3B587827FA399D00DBDF65 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		FC410CD929A1E03400325F28 /* RulesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesScreen.swift; sourceTree = "<group>"; };
 		FC462C8327E6849F001B1B10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC462C8527E79500001B1B10 /* Killswitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Killswitch.swift; sourceTree = "<group>"; };
 		FC462C8727E7954B001B1B10 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				FC8F74B027A4831400779157 /* GameScreen.swift */,
 				FC861A4D27DD431E005CE3F3 /* RootScreen.swift */,
 				FC036FCC27C5DAF100325826 /* RoundsScreen.swift */,
+				FC410CD929A1E03400325F28 /* RulesScreen.swift */,
 				FC6A792427EF6BE0001272DA /* ScoresScreen.swift */,
 				FC861A4B27DD42AB005CE3F3 /* SplashScreen.swift */,
 				FC09A6FC27AF4BDB00715D3E /* TitleScreen.swift */,
@@ -460,6 +463,7 @@
 				FC036FD427C5F2A500325826 /* Dictionary.swift in Sources */,
 				FC3B587527FA281700DBDF65 /* RoundRecord.swift in Sources */,
 				FC6A792527EF6BE0001272DA /* ScoresScreen.swift in Sources */,
+				FC410CDA29A1E03400325F28 /* RulesScreen.swift in Sources */,
 				FC462C8E27E7C4B7001B1B10 /* 1-CreateGamesMigration.swift in Sources */,
 				FC84210F27CADE9D0035E151 /* Font.swift in Sources */,
 				FC462C8827E7954B001B1B10 /* Loader.swift in Sources */,
