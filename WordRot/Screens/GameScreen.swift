@@ -9,20 +9,23 @@ struct GameScreen: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            HStack() {
+            HStack(spacing: 0) {
                 RottenButton("quit", action: quitGame)
                     .frame(width: 100, alignment: .leading)
                 
-                Spacer()
+                Spacer(minLength: 0)
                 
                 Text(String(game.score))
                     .font(Font.futura(60))
+                    .scaledToFit()
+                    .minimumScaleFactor(0.5)
                 
-                Spacer()
+                Spacer(minLength: 0)
                 
                 RottenLink("words", destination: RoundsScreen(game: game))
                     .frame(width: 100, alignment: .trailing)
             }
+            .frame(height: 80)
             
             VStack(spacing: 0) {
                 Spacer(minLength: 0)
@@ -92,7 +95,10 @@ struct GameScreen: View {
 
 struct GameScreen_Previews: PreviewProvider {
     static var previews: some View {
-        GameScreen()
+        let record = GameRecord(id: 1, status: "started")
+        let game = Game(record: record, rounds: [], tiles: [])
+        game.score = 99
+        return GameScreen(game: game)
             .preferredColorScheme(.dark)
     }
 }
